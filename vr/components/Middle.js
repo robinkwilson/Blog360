@@ -7,13 +7,12 @@ export default class Middle extends Component {
 
 	constructor (props) {
 			super (props);
-			console.log('props are: ', props);
 	}
 
 	render () {
 		console.log(this.props.isDefaultView);
 		return (
-			<View style={StyleSheet.flatten([stylesheet.midView, stylesheet.viewBox, this.props.hide ? stylesheet.hideAllViews : ''])}>
+			<View style={[stylesheet.midView, stylesheet.viewBox]}>
 				<Text style={{fontSize: 0.3}}>{this.props.title}</Text>
 				<Text style={{fontSize: 0.2}}>{this.props.text}</Text>
 			</View>

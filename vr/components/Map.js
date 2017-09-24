@@ -13,10 +13,9 @@ export default class Map extends Component {
 	render () {
 		return (
 			<View 
-				style={ StyleSheet.flatten([
+				style={[
 					stylesheet.mapView, 
-					stylesheet.viewBox, 
-					this.props.hide ? stylesheet.hideAllViews : ''])
+					stylesheet.viewBox]
 				}>
 					<Image style={stylesheet.mapImage}
 						source={require('../../static_assets/globeStaticView.jpeg')} /> 

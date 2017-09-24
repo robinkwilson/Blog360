@@ -16,7 +16,7 @@ export default class Waypoint extends Component {
 
 	render () {
 		return (
-			<VrButton style={this.props.hide ? stylesheet.hideAllViews : ''}onClick={() => {this.props.click(this.props.place)}}>
+			<VrButton onClick={() => {this.props.click(this.props.place)}}>
 				<Cylinder
 				radiusTop={.1}
 				radiusBottom={0}

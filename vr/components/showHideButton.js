@@ -17,7 +17,7 @@ export default class ShowHideButton extends Component {
             fontSize: 0.4,
             fontWeight: '400',
           }}>
-          {this.props.hide ? 'Show' : 'Hide'}
+          {this.props.hide > 0 ? 'Show' : 'Hide'}
         </Text></VrButton>
 		);
 	}

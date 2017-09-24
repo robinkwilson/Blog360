@@ -6,7 +6,6 @@ export default stylesheet = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'stretch', 
     backgroundColor: '#000000BF',
-    display: 'flex',
   },
   midView: {
     padding: 0.1,
@@ -78,6 +77,16 @@ export default stylesheet = StyleSheet.create({
     margin: 20,
     flexDirection: 'row',
     justifyContent: 'space-between'
+  },
+
+  //Dissappear
+  hidden: {
+    opacity: 0
+  },
+  show: {
+    opacity: 1
   }
 
+
 });
+

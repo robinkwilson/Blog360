@@ -6,7 +6,9 @@ import {
   Text,
   View,
 	VrButton,
-	Cylinder
+  Cylinder,
+  Animated,
+  Easing
 } from 'react-vr';
 
 import { Map, AboutMe, Middle, Waypoint, ShowHideButton, stylesheet, content } from './index.js';
@@ -16,7 +18,8 @@ export default class Home extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-			hide: false,
+      hideSlide: new Animated.Value(1),
+      hide: false,
 			viewArray: ['aboutPage'],
 			curPanoViewRotateY: -120,
 			curPanoPhoto: 'seattle.jpg',
@@ -27,9 +30,32 @@ export default class Home extends React.Component {
   }
 
   handleHide () {
-    if (!this.state.hide) this.setState({ hide: true });
-    else this.setState({ hide: false });
-    console.log(this.state.hide);
+
+    if (!this.state.hide) { // visible > hidden
+      console.log("// visible > hidden")
+      this.setState({hide: true});
+      Animated.timing(
+        this.state.hideSlide,
+        {
+          toValue: 0,
+          duration: 1000,
+          //delay: 1000,
+          //easing: Easing.ease
+        }
+      ).start (); 
+    } else { // hidden > visible
+      console.log("// hidden > visible")
+      this.setState({hide: false});
+      Animated.timing(
+        this.state.hideSlide,
+        {
+          toValue: 1,
+          duration: 1000,
+          //delay: 1000,
+          //easing: Easing.ease
+        }
+      ).start (); 
+    }
 	}
 	
 	setNewPlace(content) {
@@ -59,12 +85,16 @@ export default class Home extends React.Component {
 
 				<ShowHideButton handleHide={this.handleHide} hide={this.state.hide} />
 
-				{/* EasternEurope */}
-				<Waypoint hide={this.state.hide} click={this.click} place={'easternEurope'} x={-2.2} y={-.23} z={-3} />
-				<Waypoint hide={this.state.hide} click={this.click} place={'seattle'} x={-3.43} y={-0.35} z={-3} />
+        <Animated.View style={{opacity: this.state.hideSlide}}>
+          {/* EasternEurope */}
+          <Waypoint click={this.click} place={'easternEurope'} x={-2.2} y={-.23} z={-3} />
+          
+          {/* Seattle */}
+          <Waypoint click={this.click} place={'seattle'} x={-3.43} y={-0.35} z={-3} />
 
-        <Middle hide={this.state.hide} isDefaultView={true} title={'About Me'} text={'Lorem ipsum dolor sit amet, id fierent instructior est. Malis volumus posidonium te qui. Te eum nulla integre pericula, sit nobis tation maiestatis ut. Mea ad summo aperiri maiestatis. An mel esse aperiri tibique, at sea tibique moderatius, dolore appareat officiis cum cu.'} />
-        <Map hide={this.state.hide} />
+          <Middle isDefaultView={true} title={'About Me'} text={'Lorem ipsum dolor sit amet, id fierent instructior est. Malis volumus posidonium te qui. Te eum nulla integre pericula, sit nobis tation maiestatis ut. Mea ad summo aperiri maiestatis. An mel esse aperiri tibique, at sea tibique moderatius, dolore appareat officiis cum cu.'} />
+          <Map />
+        </Animated.View>
       </View>
     );
   }
