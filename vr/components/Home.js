@@ -27,11 +27,6 @@ export default class Home extends React.Component {
     else this.setState({ hide: false });
     console.log(this.state.hide);
 	}
-	easternEuropeButton () {
-    if (!this.state.hide) this.setState({ hide: true });
-    else this.setState({ hide: false });
-    console.log(this.state.hide);
-  }
 
   render() {
 		console.log(Map);
@@ -53,9 +48,8 @@ export default class Home extends React.Component {
         </Text></VrButton>
 
 				<VrButton
-				onClick={this._onPressButton}>
+				onClick={() => {this.setState({curPanorama: 'dresden.jpg'})}}>
 				<Cylinder
-					onClick={() => {console.log("clicked")}}
 					radiusTop={.1}
 					radiusBottom={0}
 					dimHeight={.2}
