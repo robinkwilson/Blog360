@@ -6,48 +6,41 @@ export default stylesheet = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'stretch', 
     backgroundColor: '#000000BF',
+    position: 'absolute'
   },
   midView: {
     padding: 0.1,
     width: 3,
     height: 3,
-    transform: [{translate: [-1, 2.75, -5]}],
+    transform: [{translate: [-1.5, 2.75, -5]}],
   },
   mapView: {
     width: 5.5,
     height: 4,
     transform: [
-      {translate: [-2, 3, -5]},
+      {translate: [-2.75, 0, -5]},
       {rotateX: -45}],
     padding: 0,
   },
   leftView: {
     padding: 0.1,
-    width: 3,
+    width: 2.2,
     height: 3,
     transform: [
-      {translate: [-1, 2.75, -5]},
-      {rotateY: -15}
-    ],
+      {translate: [-3.85, 2.75, -4.5]},
+      {rotateY: -340}],
   },
   rightView: {
     padding: 0.1,
-    width: 3,
+    width: 2.2,
     height: 3,
     transform: [
-      {translate: [-1, 2.75, -5]},
-      {rotateY: 15}
-    ],
+      {translate: [1.6, 2.75, -4.5]},
+      {rotateY: -20 }],
   },
   mapImage: {
     width: 5.5,
     height: 4,
-  },
-  leftView: {
-    color: 'red',
-  },
-  rightView: {
-    color: 'green',
   },
   hideAllViews: {
     display: 'none'
@@ -55,6 +48,7 @@ export default stylesheet = StyleSheet.create({
 
   //WAYPOINTS
   wayPoint_view: {
+    position: 'absolute',
     padding: 0.1,
     width: 3,
     height: 3,
