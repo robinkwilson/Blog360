@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-vr';
 
 export default stylesheet = StyleSheet.create({
+  
+  //VIEW STYLING
   viewBox: {
     flex: 1,
     flexDirection: 'column',
@@ -42,9 +44,6 @@ export default stylesheet = StyleSheet.create({
     width: 5.5,
     height: 4,
   },
-  hideAllViews: {
-    display: 'none'
-  },
 
   //WAYPOINTS
   wayPoint_view: {
@@ -66,11 +65,6 @@ export default stylesheet = StyleSheet.create({
     //backgroundColor: '#77787980', 
     transform: [{translate: [-2, 3, -5]}],
     padding: 0.02,
-  },
-  alternativeLayoutButtonContainer: {
-    margin: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-between'
   },
 
   //Dissappear

@@ -11,6 +11,7 @@ export default class Map extends Component {
 	}
 
 	render () {
+		console.log(4);
 		return (
 			<View 
 				style={[
