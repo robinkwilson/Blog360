@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { View, Text, Image, StyleSheet } from 'react-vr';
-import stylesheet from '../../static_assets/stylesheet.js';
+import { stylesheet } from './index.js';
 
 export default class Map extends Component {
 
@@ -13,8 +13,14 @@ export default class Map extends Component {
 	render () {
 		return (
 			<View 
-			style={StyleSheet.flatten([stylesheet.mapView, stylesheet.viewBox, this.props.hide ? stylesheet.hideAllViews : ''])}>
-			<Text style={{fontSize: 0.3}}>Where do you want to go?</Text>
+				style={ StyleSheet.flatten([
+					stylesheet.mapView, 
+					stylesheet.viewBox, 
+					this.props.hide ? stylesheet.hideAllViews : ''])
+				}>
+					<Image style={stylesheet.mapImage}
+						source={require('../../static_assets/globeStaticView.jpeg')} /> 
+					
 			</View>
 		);
 	}

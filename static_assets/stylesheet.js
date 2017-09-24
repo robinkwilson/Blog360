@@ -5,11 +5,12 @@ export default stylesheet = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'stretch', 
-    padding: 0.1,
+
     backgroundColor: '#000000BF',
     display: 'flex',
   },
   midView: {
+    padding: 0.1,
     width: 3,
     height: 3,
     transform: [{translate: [-1, 2.75, -5]}],
@@ -20,19 +21,41 @@ export default stylesheet = StyleSheet.create({
     transform: [
       {translate: [-2, 3, -5]},
       {rotateX: -45}],
+    padding: 0,
+  },
+  mapImage: {
+    width: 5.5,
+    height: 4,
   },
   leftView: {
     color: 'red',
   },
   rightView: {
-
+    color: 'green',
   },
   hideAllViews: {
     display: 'none'
   },
 
-  button: {
-    width: 0.7
+  //WAYPOINTS
+  wayPoint_view: {
+    padding: 0.1,
+    width: 3,
+    height: 3,
+    transform: [{translate: [-1, 2.75, -3]}],
+  },
+  wayPoint_img: {
+    width: 3,
+    height: 3,
+  },
+
+  //MENU DISAPPEAR BUTTON
+  toggleViewButton: {
+    width: 1, 
+    height: .5, 
+    backgroundColor: '#77787980', 
+    transform: [{translate: [-2, 3, -5]}],
+    padding: 0.02
   },
   alternativeLayoutButtonContainer: {
     margin: 20,
@@ -40,4 +63,4 @@ export default stylesheet = StyleSheet.create({
     justifyContent: 'space-between'
   }
 
-  });
+});

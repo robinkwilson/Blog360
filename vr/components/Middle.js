@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 import { View, Text, Image, StyleSheet } from 'react-vr';
-import stylesheet from '../../static_assets/stylesheet.js';
+import { stylesheet} from './index.js';
 
-export default class AboutMe extends Component {
+export default class Middle extends Component {
 
 	constructor (props) {
 			super (props);
