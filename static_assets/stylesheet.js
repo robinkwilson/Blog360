@@ -69,9 +69,9 @@ export default stylesheet = StyleSheet.create({
   toggleViewButton: {
     width: 1, 
     height: .5, 
-    backgroundColor: '#77787980', 
+    //backgroundColor: '#77787980', 
     transform: [{translate: [-2, 3, -5]}],
-    padding: 0.02
+    padding: 0.02,
   },
   alternativeLayoutButtonContainer: {
     margin: 20,
