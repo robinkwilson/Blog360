@@ -5,7 +5,6 @@ export default stylesheet = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'stretch', 
-
     backgroundColor: '#000000BF',
     display: 'flex',
   },
@@ -22,6 +21,24 @@ export default stylesheet = StyleSheet.create({
       {translate: [-2, 3, -5]},
       {rotateX: -45}],
     padding: 0,
+  },
+  leftView: {
+    padding: 0.1,
+    width: 3,
+    height: 3,
+    transform: [
+      {translate: [-1, 2.75, -5]},
+      {rotateY: -15}
+    ],
+  },
+  rightView: {
+    padding: 0.1,
+    width: 3,
+    height: 3,
+    transform: [
+      {translate: [-1, 2.75, -5]},
+      {rotateY: 15}
+    ],
   },
   mapImage: {
     width: 5.5,
