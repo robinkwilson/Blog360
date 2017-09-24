@@ -7,11 +7,9 @@ export default class ShowHideButton extends Component {
 
 	constructor (props) {
 		super (props);
-		this.state.hide = this.props.hide;
 	}
 
 	render () {
-		console.log("I AM THE BUTTON");
 		return (
 			<VrButton style={stylesheet.toggleViewButton} onClick={() => this.props.handleHide()}>
 				<Text
@@ -19,7 +17,7 @@ export default class ShowHideButton extends Component {
             fontSize: 0.4,
             fontWeight: '400',
           }}>
-          {this.state.hide ? 'Show' : 'Hide'}
+          {this.props.hide ? 'Show' : 'Hide'}
         </Text></VrButton>
 		);
 	}
