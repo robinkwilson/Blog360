@@ -9,7 +9,7 @@ import {
 	Cylinder
 } from 'react-vr';
 
-import { Map, AboutMe, Middle, stylesheet, content } from './index.js';
+import { Map, AboutMe, Middle, Waypoint, ShowHideButton, stylesheet, content } from './index.js';
 
 export default class Home extends React.Component {
 
@@ -17,48 +17,51 @@ export default class Home extends React.Component {
     super(props);
     this.state = {
 			hide: false,
-			curPanorama: 'seattle.jpg'
+			viewArray: ['aboutPage'],
+			curPanoViewRotateY: -120,
+			curPanoPhoto: 'seattle.jpg',
+			curMap: 'globeStaticView.jpg',
     }
-    this._onPressButton = this._onPressButton.bind(this);
+		this.handleHide = this.handleHide.bind(this);
+		this.handleBack = this.handleBack.bind(this);
   }
 
-  _onPressButton () {
+  handleHide () {
     if (!this.state.hide) this.setState({ hide: true });
     else this.setState({ hide: false });
     console.log(this.state.hide);
 	}
+	
+	setNewPlace(content) {
+		this.setState({
+			curPanoViewRotateY: content.pano.rotateY,
+			curPanoPhoto: content.pano.imgRef,
+			curMap: content.map.imgRef,
+		})
+	}
+
+	handleBack () {
+		console.log("back back");
+	}
+
+	click (place) {
+		console.log(place);
+	}
 
   render() {
 		console.log(Map);
+
     return (
       <View>
-        <Pano source={asset(this.state.curPanorama)} style={{
+        <Pano source={asset(this.state.curPanoPhoto)} style={{
           transform: [
-				    {rotateY: -120}],}}/>
+				    {rotateY: this.state.curPanoViewRotateY}],}}/>
 
-          <VrButton
-            style={stylesheet.toggleViewButton}
-            onClick={this._onPressButton}
-          ><Text
-          style={{
-            fontSize: 0.4,
-            fontWeight: '400',
-          }}>
-          {this.state.hide ? 'Show' : 'Hide'}
-        </Text></VrButton>
+				<ShowHideButton handleHide={this.handleHide} hide={this.state.hide} />
 
-				<VrButton
-				onClick={() => {this.setState({curPanorama: 'dresden.jpg'})}}>
-				<Cylinder
-					radiusTop={.1}
-					radiusBottom={0}
-					dimHeight={.2}
-					segments={10}
-					style={{
-						transform: [{translate: [-2.2, -.1, -2.5]}],
-						color: "red"
-						}}
-				/></VrButton>
+				{/* EasternEurope */}
+				<Waypoint hide={this.state.hide} click={this.click} place={'easternEurope'} x={-2.2} y={-.23} z={-3} />
+				<Waypoint hide={this.state.hide} click={this.click} place={'seattle'} x={-3.43} y={-0.35} z={-3} />
 
         <Middle hide={this.state.hide} isDefaultView={true} title={'About Me'} text={'Lorem ipsum dolor sit amet, id fierent instructior est. Malis volumus posidonium te qui. Te eum nulla integre pericula, sit nobis tation maiestatis ut. Mea ad summo aperiri maiestatis. An mel esse aperiri tibique, at sea tibique moderatius, dolore appareat officiis cum cu.'} />
         <Map hide={this.state.hide} />
