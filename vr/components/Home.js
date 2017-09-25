@@ -21,7 +21,10 @@ import {
   NewPage,
   stylesheet, 
   content,
-  HomeButton } from './index.js';
+  HomeButton,
+  EasternEurope,
+  WorldMap,
+  Germany } from './index.js';
 
 export default class Home extends React.Component {
 
@@ -40,6 +43,7 @@ export default class Home extends React.Component {
     this.click = this.click.bind(this);
     this.changePano = this.changePano.bind(this);
     this.resetHome = this.resetHome.bind(this);
+    this.setContent = this.setContent.bind(this);
     
   }
 
@@ -74,34 +78,59 @@ export default class Home extends React.Component {
 
   resetHome () {
     this.setState({
-      curContent: 'Home'
+      curContent: 'Home',
+      curPanoViewRotateY: -135,
+			curPanoPhoto: 'seattle.jpg',
     });
+
   }
-	// handleBack () {
-	// 	console.log("back back");
-	// }
+
+  setContent (name) {
+    name === 'Home' 
+    ? this.resetHome()
+    : this.setState({
+      curContent: name
+      });
+  }
 
 	click (place) {
 		console.log(place);
 	}
 
   render () {
+    const {curContent, curPanoViewRotateY, curPanoPhoto, hide, hideSlide} = this.state;
     return (
       <View>
         <Pano 
-          source={asset(this.state.curPanoPhoto)} 
+          source={asset(curPanoPhoto)} 
           style={{
-            transform: [{rotateY: this.state.curPanoViewRotateY}]
+            transform: [{rotateY: curPanoViewRotateY}]
           }}
         />
 
-				<ShowHideButton handleHide={this.handleHide} hide={this.state.hide} />
+				<ShowHideButton handleHide={this.handleHide} hide={hide} />
           
-        <Animated.View style={{opacity: this.state.hideSlide}}>
+        <Animated.View style={{opacity: hideSlide}}>
           <HomeButton resetHome={this.resetHome} />
-          
-          <AboutPage changePano={this.changePano} clickWaypoint={this.click} /> 
+          { 'Home' === curContent && 
+              <AboutPage changePano={this.changePano} clickWaypoint={this.click} setContent={this.setContent} />
+          }
+          { 'EasternEurope' === curContent && 
+              <EasternEurope changePano={this.changePano} clickWaypoint={this.click} setContent={this.setContent} />
+          }
+          { ( 'EasternEurope' === curContent || 'Home' === curContent ) && 
+              <WorldMap setContent={this.setContent} curWaypoint={curContent === 'Home' ? 'Seattle' : 'EasternEurope'}/>
+          }
 
+          { 'Germany' === curContent && 
+              <Germany changePano={this.changePano} clickWaypoint={this.click} setContent={this.setContent} />
+          }
+          { 'Prague' === curContent && 
+              <EasternEurope changePano={this.changePano} clickWaypoint={this.click} setContent={this.setContent} />
+          }
+          { 'KutnaHora' === curContent && 
+              <EasternEurope changePano={this.changePano} clickWaypoint={this.click} setContent={this.setContent} />
+          }
         </Animated.View>
       </View>
     );

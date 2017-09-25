@@ -13,3 +13,5 @@ export {default as content} from '../../static_assets/content.js';
 export {default as Left_Images} from './Left_Images.js';
 export {default as Right_MenuItem} from './Right_MenuItem.js';
 export {default as HomeButton} from './HomeButton.js';
+export {default as EasternEurope} from './EasternEurope.js';
+export {default as Germany} from './Germany.js';

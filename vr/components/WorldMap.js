@@ -28,14 +28,14 @@ export default class WorldMap extends React.Component {
   }
 
   render() {
-		console.log(3);
+    const isSeattle = this.props.curWaypoint === 'Seattle';
     return (
       <View>
 				<Map />
 				{/* EasternEurope */}
-				<Waypoint click={this.props.clickWaypoint} place={'easternEurope'} x={-2.2} y={-.23} z={-3} />
+				<Waypoint selected={!isSeattle} setContent={this.props.setContent} place={'EasternEurope'} x={.2} y={-.5} z={-3} />
 				{/* Seattle */}
-				<Waypoint click={this.props.clickWaypoint} place={'seattle'} x={-3.43} y={-0.35} z={-3} />
+        <Waypoint selected={isSeattle} setContent={this.props.setContent} place={'Home'} x={-1.05} y={-0.6} z={-3} />
       </View>
     );
   }
