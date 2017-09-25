@@ -60,11 +60,22 @@ export default stylesheet = StyleSheet.create({
 
   //MENU DISAPPEAR BUTTON
   toggleViewButton: {
+    position: 'absolute',
     width: 1, 
     height: .5, 
     //backgroundColor: '#77787980', 
-    transform: [{translate: [-2, 3, -5]}],
-    padding: 0.02,
+    transform: [{translate: [-1.5, 3.4, -5]}],
+    padding: 0.03,
+    paddingLeft: 0.1,
+  },
+  //HOME BUTTON
+  homeButton: {
+    position: 'absolute',
+    width: 1.8, 
+    height: .5, 
+    transform: [{translate: [-.3, 3.4, -5]}],
+    padding: 0.03,
+    paddingRight: 0.1,
   },
 
   //Dissappear

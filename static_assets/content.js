@@ -1,52 +1,57 @@
 export default content = {
-	landing: {
+	about: {
 		middle: {
 			title: 'About Me',
 			text: 'Lorem ipsum dolor sit amet, id fierent instructior est. Malis volumus posidonium te qui. Te eum nulla integre pericula, sit nobis tation maiestatis ut. Mea ad summo aperiri maiestatis. An mel esse aperiri tibique, at sea tibique moderatius, dolore appareat officiis cum cu.'
 		},
 		defaultPano: {
 			imgRef: 'seattle.jpg',
-			rotateY: -120,
+			rotateY: -140,
 		},
 		map: {
 			imgRef: 'globeStaticView.jpeg'
 		},
-		right: {
-			item1: {
+		blogEntries: [
+			{
+				key: 1,
 				imgRef: 'cat.jpg',
-				title: 'BERLIN',
+				title: 'Berlin',
 				date: 'April 29, 2017'
 			},
-			item2: {
+			{
+				key: 2,
 				imgRef: 'cat.jpg',
-				title: 'PRAGUE',
+				title: 'Prague',
 				date: 'May 4, 2017'
 			},
-			item3: {
+			{
+				key: 3,
 				imgRef: 'cat.jpg',
-				title: 'KUTNAHORA',
+				title: 'Kutna Hora',
 				date: 'May 6, 2017'
 			}
+		],
+		imagesAndPanoInfo: [
+			{
+				key: 1,
+				imgRef: 'cat.jpg',
+				panoRef: 'seattle.jpg',
+				panoRotateY: -140,
+			},
+			{
+				key: 2,
+				imgRef: 'cat.jpg',
+				panoRef: 'seattle3.jpg',
+				panoRotateY: 90,
+			},
+			{
+				key: 3,
+				imgRef: 'cat.jpg',
+				panoRef: 'oakland.jpg',
+				panoRotateY: 80,
+			},
+			]
 		},
-		left: {
-			hide: true,
-		}
-	},
-	
-	aboutPage: {
-		middleText: {
-			title: 'About Me',
-			text: 'Lorem ipsum dolor sit amet, id fierent instructior est. Malis volumus posidonium te qui. Te eum nulla integre pericula, sit nobis tation maiestatis ut. Mea ad summo aperiri maiestatis. An mel esse aperiri tibique, at sea tibique moderatius, dolore appareat officiis cum cu.'
-		},
-		map: {
-			imgRef: 'globeStaticView.jpeg'
-		},
-		pano: {
-			imgRef: 'seattle.jpg',
-			rotateY: -120,
-		}
-	},
-
 	easternEuropePage: {
 		middleText: {
 			title: 'Eastern Europe Trip',

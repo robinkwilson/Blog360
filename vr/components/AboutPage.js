@@ -25,24 +25,17 @@ export default class About extends React.Component {
 
   constructor (props) {
     super(props);
-    this.state = {
-      hideSlide: new Animated.Value(1),
-      hide: false,
-			viewArray: ['aboutPage'],
-			curPanoViewRotateY: -135,
-			curPanoPhoto: 'seattle.jpg',
-      curMap: 'globeStaticView.jpg',
-      curContent: content.staticTest,
-    }
   }
 
   render() {
+    const { changePano, clickWaypoint } = this.props
+    const { imagesAndPanoInfo, blogEntries } = content.about
     return (
       <View>
-          <Left hide={false} title={'Left View'} text={'HI'}/>
-          <Right hide={false} title={'Right View'} text={'HI'}/>
-          <Middle title={'Welcome to my Travelling 360 Blog'} text={"This VR blog has been an idea of mine for a long time! I'm very excited to show you the 360 photos I've taken on my travels!"} />
-          <WorldMap clickWaypoint={this.props.clickWaypoint} />
+          <Left hide={false} title={'Seattle and Oakland'} changePano={changePano} imagesAndPanoInfo={imagesAndPanoInfo} />
+          <Right hide={false} title={'Blog Posts'} blogEntries={blogEntries}/>
+          <Middle title={'Welcome to my Travelling 360 Blog'} text={"This VR blog has been an idea of mine for a long time! I'm very excited to show you the 360 photos I've taken on my travels! \n\n These 360 photos started as a street art project. \n\n Click around enjoy!"} />
+          <WorldMap clickWaypoint={clickWaypoint} />
       </View>
     );
   }

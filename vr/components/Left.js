@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import { View, Text, Image, StyleSheet, Animated } from 'react-vr';
-import { stylesheet} from './index.js';
+import { View, Text, Image, StyleSheet, Animated, VrButton } from 'react-vr';
+import { stylesheet, Left_Images} from './index.js';
 
 export default class Left extends Component {
 
@@ -9,18 +9,16 @@ export default class Left extends Component {
 		super (props);
 	}
 
-
-
 	render () {
 		return (
 			<Animated.View style={[stylesheet.leftView, stylesheet.viewBox, this.props.hide ? {display:'none'} : '']}>
-				<Text style={{fontSize: 0.3}}>{this.props.title}</Text>
-				<Text style={{fontSize: 0.2}}>{this.props.text}</Text>
+				<Text style={{fontSize: 0.2, flexDirection: 'column'}}>{this.props.title}</Text>
+				{
+					this.props.imagesAndPanoInfo.map( info => 
+						<Left_Images key={info.key} changePano={this.props.changePano} info={info} />
+					)
+				}
 			</Animated.View>
 		);
 	}
 }
-
-/* <Image style={{width: 1, height: 1, }}
-source={require{'./static_assets/cat.jpg'}}
-/> */

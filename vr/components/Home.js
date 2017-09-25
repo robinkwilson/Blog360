@@ -20,7 +20,8 @@ import {
   AboutPage,
   NewPage,
   stylesheet, 
-  content } from './index.js';
+  content,
+  HomeButton } from './index.js';
 
 export default class Home extends React.Component {
 
@@ -33,10 +34,13 @@ export default class Home extends React.Component {
 			curPanoViewRotateY: -135,
 			curPanoPhoto: 'seattle.jpg',
       curMap: 'globeStaticView.jpg',
-      curContent: content.staticTest,
+      curContent: 'Home',
     }
 		this.handleHide = this.handleHide.bind(this);
     this.click = this.click.bind(this);
+    this.changePano = this.changePano.bind(this);
+    this.resetHome = this.resetHome.bind(this);
+    
   }
 
   handleHide () {
@@ -61,14 +65,18 @@ export default class Home extends React.Component {
     }
 	}
 	
-	// setNewPlace(curContent) {
-	// 	this.setState({
-	// 		curPanoViewRotateY: curContent.defaultPano.rotateY,
-	// 		curPanoPhoto: curContent.defaultPano.imgRef,
-	// 		curMap: curContent.map.imgRef,
-	// 	})
-	// }
+	changePano(imgRef, rotateY) {
+		this.setState({
+			curPanoViewRotateY: rotateY,
+			curPanoPhoto: imgRef,
+		})
+	}
 
+  resetHome () {
+    this.setState({
+      curContent: 'Home'
+    });
+  }
 	// handleBack () {
 	// 	console.log("back back");
 	// }
@@ -78,7 +86,6 @@ export default class Home extends React.Component {
 	}
 
   render () {
-    console.log(1);
     return (
       <View>
         <Pano 
@@ -89,11 +96,11 @@ export default class Home extends React.Component {
         />
 
 				<ShowHideButton handleHide={this.handleHide} hide={this.state.hide} />
-
+          
         <Animated.View style={{opacity: this.state.hideSlide}}>
-
-        
-          <AboutPage clickWaypoint={this.click}/> 
+          <HomeButton resetHome={this.resetHome} />
+          
+          <AboutPage changePano={this.changePano} clickWaypoint={this.click} /> 
 
         </Animated.View>
       </View>
