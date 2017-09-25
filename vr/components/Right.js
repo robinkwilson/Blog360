@@ -10,14 +10,14 @@ export default class Left extends Component {
 	}
 
 	render () {
-		const { blogEntries } = this.props;
+		const { blogEntries, setContent} = this.props;
 		return (
 			<Animated.View style={[stylesheet.rightView, stylesheet.viewBox, {alignItems: 'stretch',}, this.props.hide ? {display:'none'} : '']}>
 				<Text style={{fontSize: 0.2, flexDirection: 'column'}}>{this.props.title}</Text>
 				{
 					blogEntries.map(blogEntry => 
 						(
-							<Right_MenuItem key={blogEntry.key} info={blogEntry} />
+							<Right_MenuItem setContent={setContent} key={blogEntry.key} info={blogEntry} />
 						))
 				}
 			</Animated.View>

@@ -10,10 +10,11 @@ export default class Right_MenuItem extends Component {
 	}
 
 	render () {
-		const {imgRef, title, date} = this.props.info;
+		const {imgRef, title, date, name} = this.props.info;
+		const { setContent } = this.props;
 		return (
 			<View>
-				<VrButton style={{flexDirection: 'row', marginBottom: .1}}>
+				<VrButton onClick={() => setContent(name)} style={{flexDirection: 'row', marginBottom: .1}}>
 					<Image style={{width: .75, height: .75, marginRight: .05}}
 source={require(`../../static_assets/cat.jpg`)} />
 					<View style={{flexDirection: 'column'}}>

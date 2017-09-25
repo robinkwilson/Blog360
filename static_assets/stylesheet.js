@@ -68,6 +68,15 @@ export default stylesheet = StyleSheet.create({
     padding: 0.03,
     paddingLeft: 0.1,
   },
+  toggleViewButtonBottom: {
+    position: 'absolute',
+    width: 2, 
+    height: 1, 
+    backgroundColor: 'red', 
+    transform: [{translate: [0, -3, 0]}, {rotateX: -90}],
+    padding: 0.03,
+    paddingLeft: 0.1,
+  },
   //HOME BUTTON
   homeButton: {
     position: 'absolute',

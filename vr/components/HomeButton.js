@@ -19,7 +19,7 @@ export default class HomeButton extends Component {
 				{backgroundColor: this.state.backgroundColor}]} onClick={() => this.props.resetHome()} onEnter={() => this.setState({backgroundColor: '#00004c'})} onExit={() => this.setState({backgroundColor: '#00004c80'})}>
 				<Text
           style={{
-            fontSize: 0.4,
+            fontSize: 0.3,
             fontWeight: '400',
 						textAlign: 'center',
           }}>
