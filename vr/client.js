@@ -8,6 +8,7 @@ import {VRInstance} from 'react-vr-web';
 function init(bundle, parent, options) {
   const vr = new VRInstance(bundle, 'Blog360', parent, {
     // Add custom options here
+    cursorVisibility: 'visible',
     enableHotReload: true,
     ...options,
   });
