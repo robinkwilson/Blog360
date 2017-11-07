@@ -3,10 +3,13 @@ import React from 'react';
 import { View, Image, VrButton, asset } from 'react-vr';
 
 export default function Left(props) {
-  const { panoRef, panoRotateY, key } = this.props.info;
+  const { changePano, key } = props;
+  const { panoRef, panoRotateY } = props.info;
   return (
     <View key={key}>
-      <VrButton style={{ marginBottom: .1 }} onClick={() => this.props.changePano(panoRef, panoRotateY)}>
+      <VrButton
+        style={{ marginBottom: 0.1 }}
+        onClick={() => changePano(panoRef, panoRotateY)}>
         <Image
           style={{
             width: 2,

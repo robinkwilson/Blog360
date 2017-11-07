@@ -1,18 +1,12 @@
 import React from 'react';
 import {
-  Text,
   View,
 } from 'react-vr';
 
 import {
   Right,
   Left,
-  Map,
   Middle,
-  Waypoint,
-  ShowHideButton,
-  WorldMap,
-  stylesheet,
   content
 } from './index.js';
 

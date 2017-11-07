@@ -3,7 +3,8 @@ import React from 'react';
 import { View, Text, Image, VrButton, asset } from 'react-vr';
 
 export default function Right_MenuItem(props) {
-  const { imgRef, title, date, name, setContent } = this.props.info;
+  const { setContent, info } = props;
+  const { imgRef, title, date, name } = info;
   return (
     <View>
       <VrButton
