@@ -65,8 +65,8 @@ export default content = {
 				panoRef: 'oakland.jpg',
 				panoRotateY: 80,
 			},
-			]
-		},
+		]
+	},
 	easternEurope: {
 		middleText: {
 			title: 'Eastern Europe Trip',
@@ -77,30 +77,30 @@ export default content = {
 		},
 		imagesAndPanoInfo: [
 
-			],
-	blogEntries: [
-		{
-			key: 1,
-			imgRef: 'cat.jpg',
-			title: 'Germany',
-			date: 'April 29, 2017',
-			name: 'Germany',
-		},
-		{
-			key: 2,
-			imgRef: 'cat.jpg',
-			title: 'Prague',
-			date: 'May 4, 2017',
-			name: 'Prague'
-		},
-		{
-			key: 3,
-			imgRef: 'cat.jpg',
-			title: 'Kutna Hora',
-			date: 'May 6, 2017',
-			name: 'KutnaHora'
-		}
-	],
+		],
+		blogEntries: [
+			{
+				key: 1,
+				imgRef: 'cat.jpg',
+				title: 'Germany',
+				date: 'April 29, 2017',
+				name: 'Germany',
+			},
+			{
+				key: 2,
+				imgRef: 'cat.jpg',
+				title: 'Prague',
+				date: 'May 4, 2017',
+				name: 'Prague'
+			},
+			{
+				key: 3,
+				imgRef: 'cat.jpg',
+				title: 'Kutna Hora',
+				date: 'May 6, 2017',
+				name: 'KutnaHora'
+			}
+		],
 	},
 	germany:
 	{
@@ -124,31 +124,31 @@ export default content = {
 				date: 'May 6, 2017'
 			}
 		],
-	imagesAndPanoInfo: [
-		{
-			key: 1,
-			imgRef: 'cat.jpg',
-			panoRef: 'berlin.jpg',
-			panoRotateY: -80,
-		},
-		{
-			key: 2,
-			imgRef: 'cat.jpg',
-			panoRef: 'berlin5.jpg',
-			panoRotateY: 90,
-		},
-		{
-			key: 3,
-			imgRef: 'cat.jpg',
-			panoRef: 'dresden1.jpg',
-			panoRotateY: 0,
-		},
-		{
-			key: 4,
-			imgRef: 'cat.jpg',
-			panoRef: 'dresden4.jpg',
-			panoRotateY: 180,
-		},
+		imagesAndPanoInfo: [
+			{
+				key: 1,
+				imgRef: 'cat.jpg',
+				panoRef: 'berlin.jpg',
+				panoRotateY: -80,
+			},
+			{
+				key: 2,
+				imgRef: 'cat.jpg',
+				panoRef: 'berlin5.jpg',
+				panoRotateY: 90,
+			},
+			{
+				key: 3,
+				imgRef: 'cat.jpg',
+				panoRef: 'dresden1.jpg',
+				panoRotateY: 0,
+			},
+			{
+				key: 4,
+				imgRef: 'cat.jpg',
+				panoRef: 'dresden4.jpg',
+				panoRotateY: 180,
+			},
 		],
 	},
 	prague:
@@ -173,19 +173,19 @@ export default content = {
 				date: 'May 6, 2017'
 			}
 		],
-	imagesAndPanoInfo: [
-		{
-			key: 1,
-			imgRef: 'cat.jpg',
-			panoRef: 'pragueCastle.jpg',
-			panoRotateY: -80,
-		},
-		{
-			key: 2,
-			imgRef: 'cat.jpg',
-			panoRef: 'prague2.jpg',
-			panoRotateY: 0,
-		}
+		imagesAndPanoInfo: [
+			{
+				key: 1,
+				imgRef: 'cat.jpg',
+				panoRef: 'pragueCastle.jpg',
+				panoRotateY: -80,
+			},
+			{
+				key: 2,
+				imgRef: 'cat.jpg',
+				panoRef: 'prague2.jpg',
+				panoRotateY: 0,
+			}
 		],
 	}
 }
