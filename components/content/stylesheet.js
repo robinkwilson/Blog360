@@ -27,14 +27,14 @@ export default stylesheet = StyleSheet.create({
   leftView: {
     padding: 0.1,
     width: 2.2,
-    // height: 3,
+    minHeight: 3,
     transform: [
       {translate: [-3.85, 2.75, -4.5]},
       {rotateY: -340}],
   },
   rightView: {
     padding: 0.1,
-    width: 2.2,
+    minWidth: 2.2,
     height: 3,
     transform: [
       {translate: [1.6, 2.75, -4.5]},
