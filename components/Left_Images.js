@@ -4,7 +4,7 @@ import { View, Image, VrButton, asset } from 'react-vr';
 
 export default function Left(props) {
   const { changePano, key } = props;
-  const { panoRef, panoRotateY } = props.info;
+  const { panoRef, panoRotateY, imgRef } = props.info;
   return (
     <View key={key}>
       <VrButton
@@ -16,7 +16,7 @@ export default function Left(props) {
             height: 1,
             marginRight: 0.05
           }}
-          source={asset(`cat.jpg`)} />
+          source={asset(`${imgRef}`)} />
       </VrButton>
     </View>
   );

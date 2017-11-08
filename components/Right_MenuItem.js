@@ -19,7 +19,7 @@ export default function Right_MenuItem(props) {
             height: 0.75,
             marginRight: 0.05
           }}
-          source={asset(`/cat.jpg`)} />
+          source={asset(`${imgRef}`)} />
         <View style={{ flexDirection: 'column' }}>
           <Text
             style={{

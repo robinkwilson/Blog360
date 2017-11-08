@@ -14,14 +14,14 @@ export default content = {
 		blogEntries: [
 			{
 				key: 1,
-				imgRef: 'cat.jpg',
+				imgRef: 'seattle_thumbnail.jpg',
 				title: 'Seattle',
 				date: 'Feb 18, 2017',
 				name: 'Home',
 			},
 			{
 				key: 2,
-				imgRef: 'cat.jpg',
+				imgRef: 'pragueCastle_thumbnail.jpg',
 				title: 'Eastern Europe',
 				date: 'April-May, 2017',
 				name: 'EasternEurope'
@@ -49,19 +49,19 @@ export default content = {
 		imagesAndPanoInfo: [
 			{
 				key: 1,
-				imgRef: 'cat.jpg',
+				imgRef: 'seattle_thumbnail.jpg',
 				panoRef: 'seattle.jpg',
 				panoRotateY: -140,
 			},
 			{
 				key: 2,
-				imgRef: 'cat.jpg',
+				imgRef: 'seattle3_thumbnail.jpg',
 				panoRef: 'seattle3.jpg',
 				panoRotateY: 90,
 			},
 			{
 				key: 3,
-				imgRef: 'cat.jpg',
+				imgRef: 'oakland_thumbnail.jpg',
 				panoRef: 'oakland.jpg',
 				panoRotateY: 80,
 			},
@@ -81,7 +81,7 @@ export default content = {
 		blogEntries: [
 			{
 				key: 1,
-				imgRef: 'cat.jpg',
+				imgRef: 'berlin_thumbnail.jpg',
 				title: 'Germany',
 				date: 'April 29, 2017',
 				name: 'Germany',
@@ -107,7 +107,7 @@ export default content = {
 		blogEntries: [
 			{
 				key: 1,
-				imgRef: 'cat.jpg',
+				imgRef: 'berlin_thumbnail.jpg',
 				title: 'Berlin',
 				date: 'April 29, 2017'
 			},
@@ -127,25 +127,25 @@ export default content = {
 		imagesAndPanoInfo: [
 			{
 				key: 1,
-				imgRef: 'cat.jpg',
+				imgRef: 'berlin_thumbnail.jpg',
 				panoRef: 'berlin.jpg',
 				panoRotateY: -80,
 			},
 			{
 				key: 2,
-				imgRef: 'cat.jpg',
+				imgRef: 'berlin5_thumbnail.jpg',
 				panoRef: 'berlin5.jpg',
 				panoRotateY: 90,
 			},
 			{
 				key: 3,
-				imgRef: 'cat.jpg',
+				imgRef: 'dresden1_thumbnail.jpg',
 				panoRef: 'dresden1.jpg',
 				panoRotateY: 0,
 			},
 			{
 				key: 4,
-				imgRef: 'cat.jpg',
+				imgRef: 'dresden4_thumbnail.jpg',
 				panoRef: 'dresden4.jpg',
 				panoRotateY: 180,
 			},
