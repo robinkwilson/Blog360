@@ -37,4 +37,4 @@ export default class Germany extends React.Component {
       </View>
     );
   }
-};
+}
