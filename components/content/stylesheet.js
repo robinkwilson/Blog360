@@ -1,12 +1,12 @@
 import { StyleSheet } from 'react-vr';
 
 export default stylesheet = StyleSheet.create({
-  
+
   //VIEW STYLING
   viewBox: {
     flex: 1,
     flexDirection: 'column',
-    alignItems: 'stretch', 
+    alignItems: 'stretch',
     backgroundColor: '#000000BF',
     position: 'absolute'
   },
@@ -27,7 +27,7 @@ export default stylesheet = StyleSheet.create({
   leftView: {
     padding: 0.1,
     width: 2.2,
-    height: 3,
+    // height: 3,
     transform: [
       {translate: [-3.85, 2.75, -4.5]},
       {rotateY: -340}],
@@ -61,18 +61,18 @@ export default stylesheet = StyleSheet.create({
   //MENU DISAPPEAR BUTTON
   toggleViewButton: {
     position: 'absolute',
-    width: 1, 
-    height: .5, 
-    //backgroundColor: '#77787980', 
+    width: 1,
+    height: .5,
+    //backgroundColor: '#77787980',
     transform: [{translate: [-1.5, 3.4, -5]}],
     padding: 0.03,
     paddingLeft: 0.1,
   },
   toggleViewButtonBottom: {
     position: 'absolute',
-    width: 2, 
-    height: 1, 
-    backgroundColor: 'red', 
+    width: 2,
+    height: 1,
+    backgroundColor: 'red',
     transform: [{translate: [0, -3, 0]}, {rotateX: -90}],
     padding: 0.03,
     paddingLeft: 0.1,
@@ -80,8 +80,8 @@ export default stylesheet = StyleSheet.create({
   //HOME BUTTON
   homeButton: {
     position: 'absolute',
-    width: 1.8, 
-    height: .5, 
+    width: 1.8,
+    height: .5,
     transform: [{translate: [-.3, 3.4, -5]}],
     padding: 0.03,
     paddingRight: 0.1,
