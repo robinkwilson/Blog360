@@ -4,7 +4,6 @@ import Home from './components/Home.js';
 
 export default class Blog360 extends React.Component {
   render() {
-    console.log('1');
     return (
       <Home />
     )
