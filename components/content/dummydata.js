@@ -8,8 +8,8 @@ pages = [
     blog_title: String,
     blog_text: String,
     isHome: boolean,
-    left_icons: [ Integer ],
-    right_icons: [
+    left_icons: [ Integer, ... ],
+    right_icons: [ // if [] keep the previous inside right icons 
       { 
         title: String, 
         date: String, 
@@ -57,7 +57,8 @@ export const pages = [
     isHome: true,
     left_icons: [1],
     right_icons: [
-      { title: 'Seattle', date: 'Feb 2017 - Present', icon_id: 1, page_id: 2 }
+      { title: 'Seattle, WA', date: 'Feb 2017 - Present', icon_id: 1, page_id: 2 },
+      { title: 'Oakland, CA', date: 'Feb 2017 - Present', icon_id: -1, page_id: 5 }
     ]
   },
   {
@@ -78,8 +79,8 @@ export const pages = [
     blog_title: 'Germany',
     blog_text: 'Filler text.',
     isHome: false,
-    left_icons: [],
-    right_icons: []
+    left_icons: [3],
+    right_icons: [] // if empty keep the previous inside right icons 
   },
   {
     name: 'California',
@@ -88,7 +89,7 @@ export const pages = [
     blog_text: 'Filler text.',
     isHome: false,
     left_icons: [],
-    right_icons: []
+    right_icons: [] // if empty keep the previous inside right icons 
   },
   {
     name: 'Washington',
@@ -97,7 +98,7 @@ export const pages = [
     blog_text: 'Filler text.',
     isHome: false,
     left_icons: [],
-    right_icons: []
+    right_icons: [] // if empty keep the previous inside right icons 
   }
 ];
 
