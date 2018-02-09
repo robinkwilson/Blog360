@@ -1,6 +1,42 @@
 // dummy data simulating NoSQL database schema
 
-const pages = [
+/*
+SCHEMA
+pages = [
+  { name: String,
+    id: Integer,
+    blog_title: String,
+    blog_text: String,
+    isHome: boolean,
+    left_icons: [ Integer ],
+    right_icons: [
+      { 
+        title: String, 
+        date: String, 
+        icon_id: Integer, 
+        page_id: Integer
+      },
+      ...
+    ]
+  },
+  ...
+];
+
+icons = [
+  {
+    id: Integer,
+    thumbnail_img: String, // filename
+    pano_img: String, // filename
+    title: String,
+    city: String,
+    country: String,
+    date: String,
+    location: {lat: -1, long: -1},
+  },
+
+*/
+
+export const pages = [
   {
     name: 'Home',
     id: 1,
@@ -32,7 +68,7 @@ const pages = [
     isHome: false,
     left_icons: [],
     right_icons: [
-      { title: 'Germany', date: 'Feb-May 2017', icon_id: 2, page_id: 4 },
+      { title: 'Germany', date: 'Feb-May 2017', icon_id: 3, page_id: 4 },
       { title: 'Czech Republic', date: 'Feb 2017', icon_id: 2, page_id: -1 }
     ]
   },
@@ -65,14 +101,14 @@ const pages = [
   }
 ];
 
-const icons = [
+export const icons = [
   {
     id: 1,
     thumbnail_img: 'seattle_thumbnail.jpg',
     pano_img: 'seattle.jpg',
-    pano_id: -1,
     title: 'Seattle Gasworks Park',
     city: 'Seattle',
+    country: 'USA',
     date: 'Feb 18, 2017',
     location: {lat: -1, long: -1},
   },
@@ -80,20 +116,25 @@ const icons = [
     id: 2,
     thumbnail_img: 'pragueCastle_thumbnail.jpg',
     pano_img: 'pragueCastle.jpg',
-    pano_id: -1,
     title: 'Prague Castle',
-    city: 'Czech Republic',
+    city: 'Prague',
+    country: 'Czech Republic',
     date: 'Feb 18, 2017',
     location: {lat: -1, long: -1},
   },
   {
     id: 3,
-    thumbnail_img: '_thumbnail.jpg',
+    thumbnail_img: 'berlin_thumbnail.jpg',
     pano_img: '.jpg',
-    pano_id: -1,
-    title: '',
-    city: '',
+    title: 'Berlin Wall',
+    city: 'Berlin',
+    country: 'Germany',
     date: '2017',
     location: {lat: -1, long: -1},
   },
 ];
+
+export default {
+  pages,
+  icons
+};
