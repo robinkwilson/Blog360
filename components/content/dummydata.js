@@ -2,26 +2,43 @@
 
 const pages = [
   {
-    name: 'North America',
+    name: 'Home',
     id: 1,
-    blog_title: 'Welcome to Blog360',
-    blog_text: 'Filler text.',
+    blog_title: 'Welcome to my Travelling 360 Blog',
+    blog_text: 'This VR blog has been an idea of mine for a long time! I\'m very excited to show you the 360 photos I\'ve taken on my travels! \n\n These 360 photos started as a street art project. \n\n Click around and enjoy!',
     isHome: true,
-    left_icons: [],
-    right_icons: []
+    left_icons: [1], // featured photos
+    right_icons: [
+      { title: 'North America', date: 'Feb 2017 - Present', icon_id: 1, page_id: 2 },
+      { title: 'Eastern Europe', date: 'April-May, 2017', icon_id: 2, page_id: 3 },
+    ]
+  },
+  {
+    name: 'North America',
+    id: 2,
+    blog_title: 'Here\'s my north America travels in Seattle and Oakland',
+    blog_text: 'This VR blog has been an idea of mine for a long time! I\'m very excited to show you the 360 photos I\'ve taken on my travels! \n\n These 360 photos started as a street art project. \n\n Click around and enjoy!',
+    isHome: true,
+    left_icons: [1],
+    right_icons: [
+      { title: 'Seattle', date: 'Feb 2017 - Present', icon_id: 1, page_id: 2 }
+    ]
   },
   {
     name: 'Eastern Europe',
-    id: 2,
-    blog_title: 'Eastern Europe',
-    blog_text: 'Filler text.',
+    id: 3,
+    blog_title: 'Eastern Europe Trip',
+    blog_text: 'Went to Germany, Czech Republic, etc. etc.',
     isHome: false,
     left_icons: [],
-    right_icons: []
+    right_icons: [
+      { title: 'Germany', date: 'Feb-May 2017', icon_id: 2, page_id: 4 },
+      { title: 'Czech Republic', date: 'Feb 2017', icon_id: 2, page_id: -1 }
+    ]
   },
   {
     name: 'Germany',
-    id: 3,
+    id: 4,
     blog_title: 'Germany',
     blog_text: 'Filler text.',
     isHome: false,
@@ -30,7 +47,7 @@ const pages = [
   },
   {
     name: 'California',
-    id: 4,
+    id: 5,
     blog_title: 'Oakland',
     blog_text: 'Filler text.',
     isHome: false,
@@ -39,7 +56,7 @@ const pages = [
   },
   {
     name: 'Washington',
-    id: 5,
+    id: 6,
     blog_title: 'Seattle',
     blog_text: 'Filler text.',
     isHome: false,
@@ -48,55 +65,35 @@ const pages = [
   }
 ];
 
-const left_icons = [
+const icons = [
   {
     id: 1,
-    thumbnail_img: '',
+    thumbnail_img: 'seattle_thumbnail.jpg',
+    pano_img: 'seattle.jpg',
     pano_id: -1,
-    location: {lat: 20, long: -20},
-    order: 1,
+    title: 'Seattle Gasworks Park',
+    city: 'Seattle',
+    date: 'Feb 18, 2017',
+    location: {lat: -1, long: -1},
   },
   {
     id: 2,
-    thumbnail_img: '',
+    thumbnail_img: 'pragueCastle_thumbnail.jpg',
+    pano_img: 'pragueCastle.jpg',
     pano_id: -1,
-    location: {lat: 20, long: -20},
-    order: 1,
+    title: 'Prague Castle',
+    city: 'Czech Republic',
+    date: 'Feb 18, 2017',
+    location: {lat: -1, long: -1},
   },
   {
-    id: 2,
-    thumbnail_img: '',
+    id: 3,
+    thumbnail_img: '_thumbnail.jpg',
+    pano_img: '.jpg',
     pano_id: -1,
-    location: {lat: 20, long: -20},
-    order: 1,
+    title: '',
+    city: '',
+    date: '2017',
+    location: {lat: -1, long: -1},
   },
-  {
-    id: 2,
-    thumbnail_img: '',
-    pano_id: -1,
-    location: {lat: 20, long: -20},
-    order: 1,
-  }
 ];
-
-const right_icons = [
-  {
-    id: 1,
-    thumbnail_img: '',
-    pano_id: 1,
-    title: 'xxx',
-    date: 'xxx',
-    page_id: 1,
-    order: 1
-  }
-]
-
-const panos = [
-  {
-    id: 1,
-    title: 'Hello',
-    location: {lat: 20, long: -20},
-    date: 'xxx',
-    order: 1
-  }
-]
