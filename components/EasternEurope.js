@@ -26,7 +26,6 @@ export default class EasternEurope extends React.Component {
             title={''}
             changePano={changePano}
             imagesAndPanoInfo={imagesAndPanoInfo} />
-
           <Right
             setContent={setContent}
             hide={false} title={'Blog Posts'}
