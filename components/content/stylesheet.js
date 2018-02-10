@@ -93,6 +93,13 @@ export default stylesheet = StyleSheet.create({
   },
   show: {
     opacity: 1
+  },
+
+  subtitle: {
+    fontSize: 0.3
+  },
+  bodyText: {
+    fontSize: 0.2
   }
 
 

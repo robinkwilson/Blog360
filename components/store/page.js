@@ -44,7 +44,7 @@ export const changePano = (pano_id) => {
 }
 
 // resets to initial state
-export const changePano = () => {
+export const goToHome = () => {
   return {
     action: GO_TO_HOME
   };
