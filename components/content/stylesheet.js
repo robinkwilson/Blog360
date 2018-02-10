@@ -114,7 +114,16 @@ export default stylesheet = StyleSheet.create({
     height: 0.75,
     marginRight: 0.05
   },
-  
+
+  left_icon_container: {
+    marginBottom: 0.1
+  },
+  left_icon_img: {
+    width: 2,
+    height: 1,
+    marginRight: 0.05
+  },
+
   column: { 
     flexDirection: 'column' 
   }

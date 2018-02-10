@@ -7,7 +7,8 @@ import {
 } from 'react-vr';
 
 import {
-} from './index.js';
+  _Text, BlogPost, GrayPanel, LeftIcon, RightIcon
+} from './_common';
 
 export default class Home extends Component {
 
