@@ -100,6 +100,23 @@ export default stylesheet = StyleSheet.create({
   },
   bodyText: {
     fontSize: 0.2
+  },
+  title: { //textAlign: 'left'
+    fontSize: 0.3
+  },
+
+  right_icon_container: {
+    flexDirection: 'row',
+    marginBottom: 0.1
+  },
+  right_icon_img: {
+    width: 0.75,
+    height: 0.75,
+    marginRight: 0.05
+  },
+  
+  column: { 
+    flexDirection: 'column' 
   }
 
 
