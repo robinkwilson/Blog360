@@ -2,6 +2,8 @@ import React from 'react';
 
 import { View, Image, VrButton, asset } from 'react-vr';
 
+import stylesheet from '../content/stylesheet.js';
+
 export function LeftIcon(props) {
   const { changePano, key } = props;
   const { panoRef, panoRotateY, imgRef } = props.info;

@@ -8,14 +8,14 @@ import store from './components/store';
 export default class Blog360 extends Component {
   render() {
     console.log('store is', store);    
-    // return (
-    //   <Provider store={store}>
-    //     <Home2 />
-    //   </Provider>
-    // );
     return (
-      <Home />
+      <Provider store={store}>
+        <Home2 />
+      </Provider>
     );
+    // return (
+    //   <Home />
+    // );
   }
 }
 

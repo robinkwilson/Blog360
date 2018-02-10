@@ -3,7 +3,7 @@ import React from 'react';
 import { View, Text, Image, VrButton, asset } from 'react-vr';
 
 import { _Text } from './_Text.js';
-import { stylesheet } from '../content/stylesheet.js';
+import stylesheet from '../content/stylesheet.js';
 
 export function RightIcon (props) {
   const { setContent, info } = props;

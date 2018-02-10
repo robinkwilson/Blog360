@@ -96,7 +96,7 @@ export default stylesheet = StyleSheet.create({
   },
 
   subtitle: {
-    fontSize: 0.3
+    fontSize: 0.2
   },
   bodyText: {
     fontSize: 0.2

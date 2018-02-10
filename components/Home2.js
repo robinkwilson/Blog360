@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {
   asset,
   Pano,
@@ -7,10 +8,15 @@ import {
 } from 'react-vr';
 
 import {
-  _Text, BlogPost, GrayPanel, LeftIcon, RightIcon
+  _Text,
+  GrayPanel,
+  BlogPost,
+  LeftIcon
 } from './_common';
 
-export default class Home extends Component {
+import stylesheet from './content/stylesheet.js';
+
+export default class Home2 extends Component {
 
   constructor(props) {
     super(props);
@@ -27,7 +33,10 @@ export default class Home extends Component {
             transform: [{ rotateY: -135 }]
           }}
         />
-        <Text>Hello World!!</Text>
+        <GrayPanel styles={stylesheet.midView}>
+          <BlogPost title={'Hello World'} text={'honkey wonkey butter cups ?'} />
+          <_Text styles={stylesheet.title} text={'Hello world!!'} />
+        </GrayPanel>
       </View>
     );
   }
