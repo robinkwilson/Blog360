@@ -123,6 +123,10 @@ export default stylesheet = StyleSheet.create({
     height: 1,
     marginRight: 0.05
   },
+  left_panel_container: { 
+    flexDirection: 'column',
+    fontSize: 0.2
+  },
 
   column: { 
     flexDirection: 'column' 

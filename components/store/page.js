@@ -10,7 +10,7 @@ let initial_state = {
   page: {},
   cur_pano_info: {},
   loaded_panos: [], // possibly have panos already loaded and just concatenate the additional ones
-  hide: false,
+  hide: { value: false},
   home: {
     page: {},
     cur_pano_info: {},
@@ -36,10 +36,10 @@ const changePage = (info) => {
 }
 
 // left panel click
-export const changePano = (pano_id) => {
+export const changePano = (pano_info) => {
   return {
-    type: CHANGE_PAGE,
-    pano_id
+    type: CHANGE_PANO,
+    pano_info
   };
 }
 
@@ -68,15 +68,25 @@ export const loadHomeThunk = () => (dispatch) => { // { where: {isHome: true}}
   dispatch(loadHome({ ...info }));
 }
 
-// takes the page to load information as argument
+// argument: page to load information
+// add new panos to loaded_panos
+// add pano information into page left_icons array
 // gets the current pano
-// adds the panos that need to load to loaded panos
 // returns info
 const loadPageHelper = (page) => {
-  const cur_icon_id = page.left_icons[0];
-  const cur_pano_info = icons.filter((icon) => icon.id === cur_icon_id)[0];
+
+  // add new panos to loaded_panos
   const loaded_panos = icons.filter((icon) => page.left_icons.indexOf(icon.id) !== -1);
+  
+  // add pano information into page left_icons array
+  const loaded_left_icons = page.left_icons.map(cur_id => loaded_panos.filter(cur => cur_id === cur.id)[0]);
+  page.left_icons = loaded_left_icons;
+
+  // current pano defaults to the first left icon
+  const cur_pano_info = page.left_icons[0];
+
   // TODO run function begin loading loaded_panos into browser cache -- if not already
+  
   return { page, cur_pano_info, loaded_panos };
 }
 
@@ -104,7 +114,7 @@ export function pageReducer(state = initial_state, action) {
 
     case CHANGE_PANO:
       return Object.assign({}, state, {
-        cur_pano_info: state.loaded_panos.filter((pano) => action.pano_id === pano.id)
+        cur_pano_info: action.pano_info
       });
 
     case TOGGLE_HIDE:
