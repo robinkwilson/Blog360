@@ -48,7 +48,7 @@ export const pages = [
     left_icons: [1], // featured photos
     right_icons: [
       { title: 'North America', date: 'Feb 2017 - Present', icon_id: 1, page_id: 2 },
-      { title: 'Eastern Europe', date: 'April-May, 2017', icon_id: 2, page_id: 3 },
+      { title: 'Eastern Europe', date: 'April-May, 2017', icon_id: 4, page_id: 3 },
     ]
   },
   {
@@ -60,7 +60,7 @@ export const pages = [
     left_icons: [1],
     right_icons: [
       { title: 'Seattle, WA', date: 'Feb 2017 - Present', icon_id: 1, page_id: 2 },
-      { title: 'Oakland, CA', date: 'Feb 2017 - Present', icon_id: -1, page_id: 5 }
+      { title: 'Oakland, CA', date: 'Feb 2017 - Present', icon_id: 4, page_id: 5 }
     ]
   },
   {
@@ -69,7 +69,7 @@ export const pages = [
     blog_title: 'Eastern Europe Trip',
     blog_text: 'Went to Germany, Czech Republic, etc. etc.',
     isHome: false,
-    left_icons: [],
+    left_icons: [2, 3],
     right_icons: [
       { title: 'Germany', date: 'Feb-May 2017', icon_id: 3, page_id: 4 },
       { title: 'Czech Republic', date: 'Feb 2017', icon_id: 2, page_id: -1 }
@@ -99,7 +99,7 @@ export const pages = [
     blog_title: 'Seattle',
     blog_text: 'Filler text.',
     isHome: false,
-    left_icons: [],
+    left_icons: [1],
     right_icons: [] // if empty keep the previous inside right icons 
   }
 ];
@@ -130,7 +130,18 @@ export const icons = [
   {
     id: 3,
     thumbnail_img: 'berlin_thumbnail.jpg',
-    pano_img: '.jpg',
+    pano_img: 'berlin.jpg',
+    rotateY: 0,
+    title: 'Berlin Wall',
+    city: 'Berlin',
+    country: 'Germany',
+    date: '2017',
+    location: {lat: -1, long: -1},
+  },
+  {
+    id: 4,
+    thumbnail_img: 'berlin_thumbnail.jpg',
+    pano_img: 'berlin.jpg',
     rotateY: 0,
     title: 'Berlin Wall',
     city: 'Berlin',

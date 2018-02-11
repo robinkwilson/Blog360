@@ -59,7 +59,7 @@ export const toggleHide = () => {
 export const changePageThunk = (page_id) => (dispatch) => { // where: {page_id: page_info.id}
   const page = pages.filter((page) => page.id === page_id)[0];
   const info = loadPageHelper(page);
-  dispatch(changePage(...info));
+  dispatch(changePage({ ...info }));
 }
 
 export const loadHomeThunk = () => (dispatch) => { // { where: {isHome: true}}
