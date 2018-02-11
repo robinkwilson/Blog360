@@ -27,6 +27,7 @@ icons = [
     id: Integer,
     thumbnail_img: String, // filename
     pano_img: String, // filename
+    rotateY: Integer
     title: String,
     city: String,
     country: String,
@@ -54,7 +55,7 @@ export const pages = [
     id: 2,
     blog_title: 'Here\'s my north America travels in Seattle and Oakland',
     blog_text: 'This VR blog has been an idea of mine for a long time! I\'m very excited to show you the 360 photos I\'ve taken on my travels! \n\n These 360 photos started as a street art project. \n\n Click around and enjoy!',
-    isHome: true,
+    isHome: false,
     left_icons: [1],
     right_icons: [
       { title: 'Seattle, WA', date: 'Feb 2017 - Present', icon_id: 1, page_id: 2 },
@@ -108,6 +109,7 @@ export const icons = [
     thumbnail_img: 'seattle_thumbnail.jpg',
     pano_img: 'seattle.jpg',
     title: 'Seattle Gasworks Park',
+    rotateY: -135,
     city: 'Seattle',
     country: 'USA',
     date: 'Feb 18, 2017',
@@ -117,6 +119,7 @@ export const icons = [
     id: 2,
     thumbnail_img: 'pragueCastle_thumbnail.jpg',
     pano_img: 'pragueCastle.jpg',
+    rotateY: 0,
     title: 'Prague Castle',
     city: 'Prague',
     country: 'Czech Republic',
@@ -127,6 +130,7 @@ export const icons = [
     id: 3,
     thumbnail_img: 'berlin_thumbnail.jpg',
     pano_img: '.jpg',
+    rotateY: 0,
     title: 'Berlin Wall',
     city: 'Berlin',
     country: 'Germany',
