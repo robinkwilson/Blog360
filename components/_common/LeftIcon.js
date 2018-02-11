@@ -9,7 +9,6 @@ import {
 import stylesheet from '../content/stylesheet.js';
 
 export function LeftIcon(props) {
-  console.log('10', props);
   const { icon_info, changePano } = props;
   return (
     <VrButton
