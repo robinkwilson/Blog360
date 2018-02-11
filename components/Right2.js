@@ -7,13 +7,12 @@ import { GrayPanel, RightIcon } from './_common';
 
 export function Right2 (props) {
   const { page } = props;
-  console.log('2', page);
-  console.log(page.rigth_icons);
+  console.log('2 components ', GrayPanel, RightIcon)
   return (
     <GrayPanel styles={stylesheet.rightView}>
       {
         page && page.right_icons && page.right_icons.map(
-          (icon) => (<RightIcon key={icon.id} icon_info={icon} />)
+          icon => (<RightIcon key={icon.icon_id} icon_info={icon} />)
         )
       }
     </GrayPanel>

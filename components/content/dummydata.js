@@ -13,7 +13,8 @@ pages = [
       { 
         title: String, 
         date: String, 
-        icon_id: Integer, 
+        icon_id: Integer,
+        icon_thumbnail: String, // initially undefined empty
         page_id: Integer
       },
       ...

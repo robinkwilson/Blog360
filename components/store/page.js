@@ -29,7 +29,7 @@ const loadHome = (home_info) => {
 const changePage = (info) => {
   return {
     type: CHANGE_PAGE,
-    page_info: info.page_info,
+    page: info.page,
     cur_pano_info: info.cur_pano_info,
     new_loaded_panos: info.loaded_panos
   };
@@ -57,7 +57,7 @@ export const toggleHide = () => {
 }
 
 export const changePageThunk = (page_id) => (dispatch) => { // where: {page_id: page_info.id}
-  const page = pages.filter((page) => page.id === page_id);
+  const page = pages.filter((page) => page.id === page_id)[0];
   const info = loadPageHelper(page);
   dispatch(changePage(...info));
 }
@@ -76,11 +76,20 @@ export const loadHomeThunk = () => (dispatch) => { // { where: {isHome: true}}
 const loadPageHelper = (page) => {
 
   // add new panos to loaded_panos
-  const loaded_panos = icons.filter((icon) => page.left_icons.indexOf(icon.id) !== -1);
-  
+  let loaded_panos = icons.filter((icon) => (page.left_icons.indexOf(icon.id) !== -1));
+
   // add pano information into page left_icons array
   const loaded_left_icons = page.left_icons.map(cur_id => loaded_panos.filter(cur => cur_id === cur.id)[0]);
   page.left_icons = loaded_left_icons;
+  
+  // add icon_thumbnail property to each right_icon
+  const loaded_right_icons = page.right_icons.map(right_icon => {
+    const current_icon = icons.filter(cur => right_icon.icon_id === cur.id)[0];
+    const current_icon_thumbnail = current_icon.thumbnail_img;
+    right_icon.icon_thumbnail = current_icon_thumbnail;
+    return right_icon;
+  });
+  page.right_icons = loaded_right_icons;
 
   // current pano defaults to the first left icon
   const cur_pano_info = page.left_icons[0];
@@ -107,7 +116,7 @@ export function pageReducer(state = initial_state, action) {
 
     case CHANGE_PAGE:
       return Object.assign({}, state, {
-        page: action.page_info,
+        page: action.page,
         cur_pano_info: action.cur_pano_info,
         loaded_panos: action.new_loaded_panos
       });

@@ -7,8 +7,6 @@ import { GrayPanel, _Text, LeftIcon } from './_common';
 
 export function Left2(props) {
   const { page } = props;
-  console.log('2', page);
-  console.log(page.left_icons);
   return (
     <GrayPanel styles={stylesheet.leftView}>
       <_Text styles={stylesheet.left_panel_container} text={'Featured Photos'} />

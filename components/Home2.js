@@ -17,6 +17,7 @@ import {
 
 import Middle2 from './Middle2.js';
 import Left2 from './Left2.js';
+import Right2 from './Right2.js';
 
 import {
   loadHomeThunk,
@@ -64,8 +65,6 @@ class Home2 extends Component {
 
   render() {
     const { cur_pano, hide } = this.props;
-    console.log('curpano', cur_pano, hide);
-    console.log('1',cur_pano, hide);
     return (
       <View>
         {
@@ -79,6 +78,7 @@ class Home2 extends Component {
         <Animated.View>
           <Left2 />
           <Middle2 />
+          <Right2 />
         </Animated.View>
       </View>
     );

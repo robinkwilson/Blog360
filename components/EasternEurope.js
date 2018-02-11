@@ -18,7 +18,6 @@ export default class EasternEurope extends React.Component {
   render() {
     const { changePano, setContent } = this.props;
     const { imagesAndPanoInfo, blogEntries } = content.easternEurope;
-    console.log(content.easternEurope);
     return (
       <View>
           <Left
