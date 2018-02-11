@@ -15,6 +15,8 @@ import {
   LeftIcon
 } from './_common';
 
+import Middle2 from './Middle2.js';
+
 import {
   loadHomeThunk,
 } from './store';
@@ -73,10 +75,7 @@ class Home2 extends Component {
           />
         }
         <Animated.View>
-          <GrayPanel styles={stylesheet.midView}>
-            <BlogPost title={'Hello World'} text={'honkey wonkey butter cups ?'} />
-            <_Text styles={stylesheet.title} text={'Hello world!!'} />
-          </GrayPanel>
+          <Middle2 />
         </Animated.View>
       </View>
     );
