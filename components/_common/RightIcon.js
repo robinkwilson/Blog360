@@ -9,8 +9,8 @@ import stylesheet from '../content/stylesheet.js';
 
 export function RightIcon (props) {
   const { icon_info, changePage } = props;
-  console.log('1 components ', changePageThunk, _Text);
-  console.log('icon info ', icon_info);
+  console.log('right_Icon_container styles rightIcon:', stylesheet.right_icon_container);
+  console.log('right_icon_img styles rightIcon:', stylesheet.right_icon_img);
   return (
     <View>
       <VrButton

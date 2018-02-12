@@ -10,7 +10,7 @@ let initial_state = {
   page: {},
   cur_pano_info: {},
   loaded_panos: [], // possibly have panos already loaded and just concatenate the additional ones
-  hide: { value: false},
+  hide: { value: false },
   home: {
     page: {},
     cur_pano_info: {},
@@ -79,9 +79,9 @@ const loadPageHelper = (page) => {
   let loaded_panos = icons.filter((icon) => (page.left_icons.indexOf(icon.id) !== -1));
 
   // add pano information into page left_icons array
-  const loaded_left_icons = page.left_icons.map(cur_id => loaded_panos.filter(cur => cur_id === cur.id)[0]);
+  const loaded_left_icons = page.left_icons.map(cur_id => icons.filter(cur => cur_id === cur.id)[0]);
   page.left_icons = loaded_left_icons;
-  
+
   // add icon_thumbnail property to each right_icon
   const loaded_right_icons = page.right_icons.map(right_icon => {
     const current_icon = icons.filter(cur => right_icon.icon_id === cur.id)[0];
@@ -95,7 +95,7 @@ const loadPageHelper = (page) => {
   const cur_pano_info = page.left_icons[0];
 
   // TODO run function begin loading loaded_panos into browser cache -- if not already
-  
+
   return { page, cur_pano_info, loaded_panos };
 }
 
@@ -114,11 +114,27 @@ export function pageReducer(state = initial_state, action) {
         }
       });
 
+    case GO_TO_HOME:
+      return Object.assign({}, state, {
+        page: state.home.page,
+        cur_pano_info: state.home.cur_pano_info,
+      });
+
     case CHANGE_PAGE:
+      // if new right_icons are empty, render previous right_icons
+      if (action.page.right_icons.length === 0) {
+        action.page.right_icons = state.page.right_icons;
+      }
+
+      console.log(action.page.id, state.page.id)
+      if (action.page.id === state.page.id) {
+        return state;
+      }
+
       return Object.assign({}, state, {
         page: action.page,
         cur_pano_info: action.cur_pano_info,
-        loaded_panos: action.new_loaded_panos
+        loaded_panos: [state.loaded_panos, action.new_loaded_panos]
       });
 
     case CHANGE_PANO:

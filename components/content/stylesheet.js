@@ -130,7 +130,15 @@ export default stylesheet = StyleSheet.create({
 
   column: { 
     flexDirection: 'column' 
+  },
+
+  // HOME BUTTON
+  home_button_text: {
+    fontSize: 0.3,
+    fontWeight: '400',
+    textAlign: 'center',
   }
+
 
 
 });

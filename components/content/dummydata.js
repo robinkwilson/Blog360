@@ -45,7 +45,7 @@ export const pages = [
     blog_title: 'Welcome to my Travelling 360 Blog',
     blog_text: 'This VR blog has been an idea of mine for a long time! I\'m very excited to show you the 360 photos I\'ve taken on my travels! \n\n These 360 photos started as a street art project. \n\n Click around and enjoy!',
     isHome: true,
-    left_icons: [1], // featured photos
+    left_icons: [1, 2, 3, 4], // featured photos
     right_icons: [
       { title: 'North America', date: 'Feb 2017 - Present', icon_id: 1, page_id: 2 },
       { title: 'Eastern Europe', date: 'April-May, 2017', icon_id: 4, page_id: 3 },
@@ -131,7 +131,7 @@ export const icons = [
     id: 3,
     thumbnail_img: 'berlin_thumbnail.jpg',
     pano_img: 'berlin.jpg',
-    rotateY: 0,
+    rotateY: -210,
     title: 'Berlin Wall',
     city: 'Berlin',
     country: 'Germany',

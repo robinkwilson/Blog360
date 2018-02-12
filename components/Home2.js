@@ -18,6 +18,7 @@ import {
 import Middle2 from './Middle2.js';
 import Left2 from './Left2.js';
 import Right2 from './Right2.js';
+import HomeButton2 from './HomeButton2.js';
 
 import {
   loadHomeThunk,
@@ -79,6 +80,7 @@ class Home2 extends Component {
           <Left2 />
           <Middle2 />
           <Right2 />
+          <HomeButton2 />
         </Animated.View>
       </View>
     );
