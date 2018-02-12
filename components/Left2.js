@@ -22,7 +22,7 @@ export function Left2(props) {
 const mapState = (state) => {
   //const { page, loaded_panos } = state;
   return {
-    page: state.page
+    page: state.page.page
   }
 }
 

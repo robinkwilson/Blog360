@@ -9,7 +9,7 @@ import {
 } from './_common';
 
 import {
-  goToHome,
+  loadHomeThunk,
 } from './store';
 
 export class HomeButton2 extends Component {
@@ -38,14 +38,13 @@ export class HomeButton2 extends Component {
 
 const mapState = (state) => {
   return {
-    cur_pano: state.cur_pano_info,
-    hide: state.hide,
+    cur_pano: state.page.cur_pano_info,
   }
 }
 
 const mapDispatch = (dispatch) => {
   return {
-    clickHome: () => dispatch(goToHome()),
+    clickHome: () => dispatch(loadHomeThunk()),
   }
 }
 

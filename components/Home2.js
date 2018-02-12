@@ -89,8 +89,8 @@ class Home2 extends Component {
 
 const mapState = (state) => {
   return {
-    cur_pano: state.cur_pano_info,
-    hide: state.hide,
+    cur_pano: state.page.cur_pano_info,
+    hide: state.hide.hide,
   }
 }
 

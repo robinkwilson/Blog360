@@ -16,8 +16,8 @@ export function Middle2(props) {
 
 const mapState = (state) => {
   return {
-    blog_title: state.page.blog_title,
-    blog_text: state.page.blog_text,
+    blog_title: state.page.page.blog_title,
+    blog_text: state.page.page.blog_text,
   }
 }
 
