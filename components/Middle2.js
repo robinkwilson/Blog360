@@ -8,7 +8,7 @@ import { GrayPanel, BlogPost } from './_common';
 export function Middle2(props) {
   const {blog_title, blog_text} = props;
   return (
-    <GrayPanel styles={stylesheet.midView}>
+    <GrayPanel styles={stylesheet.mid_view}>
       <BlogPost title={blog_title} text={blog_text} />
     </GrayPanel>
   );

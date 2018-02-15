@@ -8,7 +8,7 @@ import { GrayPanel, RightIcon } from './_common';
 export function Right2 (props) {
   const { page } = props;
   return (
-    <GrayPanel styles={stylesheet.rightView}>
+    <GrayPanel styles={stylesheet.right_view}>
       {
         page && page.right_icons && page.right_icons.map(
           icon => (<RightIcon key={icon.icon_id} icon_info={icon} />)

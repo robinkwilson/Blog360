@@ -3,28 +3,28 @@ import { StyleSheet } from 'react-vr';
 export default stylesheet = StyleSheet.create({
 
   //VIEW STYLING
-  viewBox: {
+  view_panel: {
     flex: 1,
     flexDirection: 'column',
     // alignItems: 'stretch',
     backgroundColor: '#000000BF',
     position: 'absolute'
   },
-  midView: {
+  mid_view: {
     padding: 0.1,
     width: 3,
     height: 3,
     transform: [{ translate: [-1.5, 2.75, -5] }],
   },
-  mapView: {
-    width: 5.5,
-    height: 4,
-    transform: [
-      { translate: [-2.75, 0, -5] },
-      { rotateX: -45 }],
-    padding: 0,
-  },
-  leftView: {
+  // mapView: {
+  //   width: 5.5,
+  //   height: 4,
+  //   transform: [
+  //     { translate: [-2.75, 0, -5] },
+  //     { rotateX: -45 }],
+  //   padding: 0,
+  // },
+  left_view: {
     padding: 0.1,
     width: 2.2,
     minHeight: 3,
@@ -33,7 +33,7 @@ export default stylesheet = StyleSheet.create({
       { rotateY: -340 }
     ],
   },
-  rightView: {
+  right_view: {
     padding: 0.1,
     minWidth: 2.3,
     height: 3,
@@ -133,7 +133,7 @@ export default stylesheet = StyleSheet.create({
     ]
   },
 
-  left_img_container: {
+  left_imgs_container: {
     marginTop: 0.3,
     minHeight: 3
   },
