@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { Text, StyleSheet, VrButton } from 'react-vr';
 import { connect } from 'react-redux';
 
-import { Text, StyleSheet, VrButton } from 'react-vr';
 import { stylesheet } from './index.js';
 import { toggleHide } from './store';
 
