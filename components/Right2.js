@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import { View, Text, Image, StyleSheet, Animated } from 'react-vr';
 import { connect } from 'react-redux';
 
-import { stylesheet } from './index.js';
+import stylesheet from './content/stylesheet.js';
 import { GrayPanel, RightIcon } from './_common';
 
 export function Right2 (props) {

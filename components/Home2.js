@@ -5,7 +5,6 @@ import {
   Pano,
   View,
   Animated,
-  Text
 } from 'react-vr';
 
 import {

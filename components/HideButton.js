@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, StyleSheet, VrButton } from 'react-vr';
 import { connect } from 'react-redux';
 
-import { stylesheet } from './index.js';
+import stylesheet from './content/stylesheet.js';
 import { toggleHide } from './store';
 
 class HideButton extends Component {

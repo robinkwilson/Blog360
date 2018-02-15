@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { Text, VrButton } from 'react-vr';
-import { stylesheet } from './index.js';
+import stylesheet from './content/stylesheet.js';
 
 import {
   _Text,
