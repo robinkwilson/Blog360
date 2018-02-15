@@ -3,7 +3,7 @@ import { pages, icons } from '../content/dummydata.js';
 const TOGGLE_HIDE = 'TOGGLE_HIDE';
 
 let initial_state = {
-  hide: { value: false },
+  hide: false,
 }
 
 export const toggleHide = () => {

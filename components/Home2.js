@@ -19,6 +19,7 @@ import Middle2 from './Middle2.js';
 import Left2 from './Left2.js';
 import Right2 from './Right2.js';
 import HomeButton2 from './HomeButton2.js';
+import HideButtons2 from './HideButtons2.js';
 
 import {
   loadHomeThunk,
@@ -28,41 +29,40 @@ import stylesheet from './content/stylesheet.js';
 
 class Home2 extends Component {
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     cur_pano: {},
-  //     //hideSlide: new Animated.Value(1),
-  //     hide: props.hide
-  //   };
-  //   console.log(props);
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      opacityValue: new Animated.Value(1),
+    };
+    this.handleHide = this.handleHide.bind(this);
+  }
 
   componentDidMount() {
     this.props.fetchHome();
   }
 
-  // handleHide() {
-  //   if (!this.state.hide) { // visible > hidden
-  //     this.setState({ hide: true });
-  //     Animated.timing(
-  //       this.state.hideSlide,
-  //       {
-  //         toValue: 0,
-  //         duration: 1000,
-  //       }
-  //     ).start();
-  //   } else { // hidden > visible
-  //     this.setState({ hide: false });
-  //     Animated.timing(
-  //       this.state.hideSlide,
-  //       {
-  //         toValue: 1,
-  //         duration: 1000,
-  //       }
-  //     ).start();
-  //   }
-  // }
+  handleHide() {
+    const { hide } = this.props;
+    if (!hide) { // visible > hidden
+      this.setState({ hide: true });
+      Animated.timing(
+        this.state.opacityValue,
+        {
+          toValue: 0,
+          duration: 1000,
+        }
+      ).start();
+    } else { // hidden > visible
+      //this.setState({ hide: false });
+      Animated.timing(
+        this.state.opacityValue,
+        {
+          toValue: 1,
+          duration: 1000,
+        }
+      ).start();
+    }
+  }
 
   render() {
     const { cur_pano, hide } = this.props;
@@ -76,7 +76,8 @@ class Home2 extends Component {
             }}
           />
         }
-        <Animated.View>
+        <HideButtons2 handleHide={this.handleHide}/>
+        <Animated.View style={{ opacity: this.state.opacityValue }}>
           <Left2 />
           <Middle2 />
           <Right2 />
