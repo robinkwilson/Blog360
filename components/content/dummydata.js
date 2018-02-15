@@ -45,10 +45,10 @@ export const pages = [
     blog_title: 'Welcome to my Travelling 360 Blog',
     blog_text: 'This VR blog has been an idea of mine for a long time! I\'m very excited to show you the 360 photos I\'ve taken on my travels! \n\n These 360 photos started as a street art project. \n\n Click around and enjoy!',
     isHome: true,
-    left_icons: [1, 2, 4], // featured photos
+    left_icons: [1, 2, 3], // featured photos
     right_icons: [
       { title: 'North America', date: 'Feb 2017 - Present', icon_id: 1, page_id: 2 },
-      { title: 'Eastern Europe', date: 'April-May, 2017', icon_id: 4, page_id: 3 },
+      { title: 'Eastern Europe', date: 'April-May, 2017', icon_id: 2, page_id: 3 },
     ]
   },
   {
@@ -57,10 +57,10 @@ export const pages = [
     blog_title: 'North America', // travels in Seattle and Oakland',
     blog_text: 'This ', //VR blog has been an idea of mine for a long time! I\'m very excited to show you the 360 photos I\'ve taken on my travels! \n\n These 360 photos started as a street art project. \n\n Click around and enjoy!',
     isHome: false,
-    left_icons: [2],
+    left_icons: [2, 8],
     right_icons: [
-      { title: 'Seattle, WA', date: 'Feb 2017 - Present', icon_id: 1, page_id: 2 },
-      { title: 'Oakland, CA', date: 'Feb 2017 - Present', icon_id: 4, page_id: 5 }
+      { title: 'Seattle, WA', date: 'Feb 2017 - Present', icon_id: 1, page_id: 6 },
+      { title: 'Oakland, CA', date: 'Feb 2017 - Present', icon_id: 8, page_id: 5 }
     ]
   },
   {
@@ -72,7 +72,7 @@ export const pages = [
     left_icons: [2],
     right_icons: [
       { title: 'Germany', date: 'Feb-May 2017', icon_id: 3, page_id: 4 },
-      { title: 'Czech Republic', date: 'Feb 2017', icon_id: 2, page_id: -1 }
+      { title: 'Czech Republic', date: 'Feb 2017', icon_id: 2, page_id: 8 }
     ]
   },
   {
@@ -81,8 +81,11 @@ export const pages = [
     blog_title: 'Germany',
     blog_text: 'Filler text.',
     isHome: false,
-    left_icons: [3, 4, 2, 1],
-    right_icons: [] // if empty keep the previous inside right icons 
+    left_icons: [3, 2, 6, 7],
+    right_icons: [
+      { title: 'Berlin', date: 'Feb 2017', icon_id: 3, page_id: 6 },
+      { title: 'Dresden', date: 'May 2017', icon_id: 6, page_id: 7 }
+    ] // if empty keep the previous inside right icons 
   },
   {
     name: 'California',
@@ -90,7 +93,7 @@ export const pages = [
     blog_title: 'Oakland',
     blog_text: 'Filler text.',
     isHome: false,
-    left_icons: [],
+    left_icons: [8],
     right_icons: [] // if empty keep the previous inside right icons 
   },
   {
@@ -99,7 +102,34 @@ export const pages = [
     blog_title: 'Seattle',
     blog_text: 'Filler text.',
     isHome: false,
-    left_icons: [1],
+    left_icons: [1, 9],
+    right_icons: [] // if empty keep the previous inside right icons 
+  },
+  {
+    name: 'Berlin',
+    id: 6,
+    blog_title: 'Berlin',
+    blog_text: 'Filler text.',
+    isHome: false,
+    left_icons: [3],
+    right_icons: [] // if empty keep the previous inside right icons 
+  },
+  {
+    name: 'Dresden',
+    id: 7,
+    blog_title: 'Dresden',
+    blog_text: 'Filler text.',
+    isHome: false,
+    left_icons: [6, 5, 7],
+    right_icons: [] // if empty keep the previous inside right icons 
+  },
+  {
+    name: 'Czech Republic',
+    id: 8,
+    blog_title: 'Prague, Czech Republic',
+    blog_text: 'Filler text.',
+    isHome: false,
+    left_icons: [2, 10],
     right_icons: [] // if empty keep the previous inside right icons 
   }
 ];
@@ -138,14 +168,70 @@ export const icons = [
     date: '2017',
     location: {lat: -1, long: -1},
   },
+  //missing id = 4
   {
-    id: 4,
-    thumbnail_img: 'berlin_thumbnail.jpg',
-    pano_img: 'berlin.jpg',
+    id: 5,
+    thumbnail_img: 'dresden_thumbnail.jpg',
+    pano_img: 'dresden.jpg',
     rotateY: 0,
-    title: 'Berlin Wall',
-    city: 'Berlin',
+    title: 'Dresden Drawn Face',
+    city: 'Dresden',
     country: 'Germany',
+    date: '2017',
+    location: {lat: -1, long: -1},
+  },
+  {
+    id: 6,
+    thumbnail_img: 'dresden1_thumbnail.jpg',
+    pano_img: 'dresden1.jpg',
+    rotateY: 0,
+    title: 'Rain Sounds Building',
+    city: 'Dresden',
+    country: 'Germany',
+    date: '2017',
+    location: {lat: -1, long: -1},
+  },
+  {
+    id: 7,
+    thumbnail_img: 'dresden4_thumbnail.jpg',
+    pano_img: 'dresden4.jpg',
+    rotateY: 0,
+    title: 'Under the Trees',
+    city: 'Dresden',
+    country: 'Germany',
+    date: '2017',
+    location: {lat: -1, long: -1},
+  },
+  {
+    id: 8,
+    thumbnail_img: 'oakland_thumbnail.jpg',
+    pano_img: 'oakland.jpg',
+    rotateY: 0,
+    title: 'Oakland Tree Street Art',
+    city: 'Oakland',
+    country: 'USA',
+    date: '2017',
+    location: {lat: -1, long: -1},
+  },
+  {
+    id: 9,
+    thumbnail_img: 'seattle3_thumbnail.jpg',
+    pano_img: 'seattle3.jpg',
+    rotateY: 0,
+    title: 'Bull and Dragon Street Art',
+    city: 'Steattle',
+    country: 'USA',
+    date: '2017',
+    location: {lat: -1, long: -1},
+  },
+  {
+    id: 10, 
+    thumbnail_img: 'prague2_thumbnail.jpg',
+    pano_img: 'prague2.jpg',
+    rotateY: 0,
+    title: 'Outer Walls of Prague Castle',
+    city: 'Prague',
+    country: 'Czech Republic',
     date: '2017',
     location: {lat: -1, long: -1},
   },
