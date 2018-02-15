@@ -12,15 +12,12 @@ export function LeftIcon(props) {
   const { icon_info, changePano } = props;
   return (
     <VrButton
-      style={stylesheet.left_icon_container}
       onClick={() => changePano(icon_info)}
     >
-
       <Image
         style={stylesheet.left_icon_img}
         source={asset(`${icon_info.thumbnail_img}`)}
       />
-
     </VrButton>
   );
 }

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Animated, View } from 'react-vr';
+import { Animated, View, StyleSheet } from 'react-vr';
 
 import stylesheet from '../content/stylesheet.js';
 
 export function GrayPanel (props) {
   const { children, styles } = props;
   return (
-    <Animated.View style={[stylesheet.viewBox, styles]}>
+    <Animated.View style={StyleSheet.flatten([stylesheet.viewBox, styles])}>
       {children}
     </Animated.View>
   );

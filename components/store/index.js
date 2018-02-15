@@ -25,4 +25,3 @@ export const store = createStore(
 export default store;
 export * from './page.js';
 export * from './hide.js';
-//export * from './pano.js';

@@ -60,8 +60,6 @@ const loadPageHelper = (page) => {
 
   // current pano defaults to the first left icon
   const cur_pano_info = ret_page.left_icons[0];
-  console.log('cur pano info is:', cur_pano_info);
-
   return { page: ret_page, cur_pano_info };
 }
 

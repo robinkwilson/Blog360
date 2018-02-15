@@ -7,8 +7,6 @@ import { GrayPanel, RightIcon } from './_common';
 
 export function Right2 (props) {
   const { page } = props;
-  console.log('page is: ', page);
-  console.log('rightView styles graypanel:', stylesheet.rightView);
   return (
     <GrayPanel styles={stylesheet.rightView}>
       {

@@ -45,7 +45,7 @@ export const pages = [
     blog_title: 'Welcome to my Travelling 360 Blog',
     blog_text: 'This VR blog has been an idea of mine for a long time! I\'m very excited to show you the 360 photos I\'ve taken on my travels! \n\n These 360 photos started as a street art project. \n\n Click around and enjoy!',
     isHome: true,
-    left_icons: [1, 2, 3, 4], // featured photos
+    left_icons: [1, 2, 4], // featured photos
     right_icons: [
       { title: 'North America', date: 'Feb 2017 - Present', icon_id: 1, page_id: 2 },
       { title: 'Eastern Europe', date: 'April-May, 2017', icon_id: 4, page_id: 3 },
@@ -54,10 +54,10 @@ export const pages = [
   {
     name: 'North America',
     id: 2,
-    blog_title: 'Here\'s my north America travels in Seattle and Oakland',
-    blog_text: 'This VR blog has been an idea of mine for a long time! I\'m very excited to show you the 360 photos I\'ve taken on my travels! \n\n These 360 photos started as a street art project. \n\n Click around and enjoy!',
+    blog_title: 'North America', // travels in Seattle and Oakland',
+    blog_text: 'This ', //VR blog has been an idea of mine for a long time! I\'m very excited to show you the 360 photos I\'ve taken on my travels! \n\n These 360 photos started as a street art project. \n\n Click around and enjoy!',
     isHome: false,
-    left_icons: [1],
+    left_icons: [2],
     right_icons: [
       { title: 'Seattle, WA', date: 'Feb 2017 - Present', icon_id: 1, page_id: 2 },
       { title: 'Oakland, CA', date: 'Feb 2017 - Present', icon_id: 4, page_id: 5 }
@@ -69,7 +69,7 @@ export const pages = [
     blog_title: 'Eastern Europe Trip',
     blog_text: 'Went to Germany, Czech Republic, etc. etc.',
     isHome: false,
-    left_icons: [2, 3],
+    left_icons: [2],
     right_icons: [
       { title: 'Germany', date: 'Feb-May 2017', icon_id: 3, page_id: 4 },
       { title: 'Czech Republic', date: 'Feb 2017', icon_id: 2, page_id: -1 }
@@ -81,7 +81,7 @@ export const pages = [
     blog_title: 'Germany',
     blog_text: 'Filler text.',
     isHome: false,
-    left_icons: [3],
+    left_icons: [3, 4, 2, 1],
     right_icons: [] // if empty keep the previous inside right icons 
   },
   {
