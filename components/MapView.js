@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { View, Image, asset } from 'react-vr';
-import { stylesheet } from './index.js';
+import stylesheet from './content/stylesheet.js';
 
 export default function MapView(props) {
   return (
