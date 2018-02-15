@@ -60,18 +60,17 @@ export default stylesheet = StyleSheet.create({
   // },
 
   //MENU DISAPPEAR BUTTON
-  toggleViewButton: {
+  hide_button_top: {
     position: 'absolute',
     width: 1,
     height: .5,
-    //backgroundColor: '#77787980',
     transform: [
       { translate: [-1.5, 3.4, -5] }
     ],
     padding: 0.03,
     paddingLeft: 0.1,
   },
-  toggleViewButtonBottom: {
+  hide_button_bottom: {
     position: 'absolute',
     width: 2,
     height: 1,
@@ -82,6 +81,11 @@ export default stylesheet = StyleSheet.create({
     ],
     padding: 0.03,
     paddingLeft: 0.1,
+  },
+  hide_button_text: {
+    fontSize: 0.3,
+    fontWeight: '400',
+    textAlign: 'center',
   },
   //HOME BUTTON
   homeButton: {

@@ -53,7 +53,6 @@ class Home2 extends Component {
         }
       ).start();
     } else { // hidden > visible
-      //this.setState({ hide: false });
       Animated.timing(
         this.state.opacityValue,
         {
@@ -100,6 +99,5 @@ const mapDispatch = (dispatch) => {
     fetchHome: () => dispatch(loadHomeThunk()),
   }
 }
-
 
 export default connect(mapState, mapDispatch)(Home2);

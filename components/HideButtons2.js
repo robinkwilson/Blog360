@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { View } from 'react-vr';
 
-import { View, Text, Image, StyleSheet, VrButton } from 'react-vr';
 import { stylesheet } from './index.js';
 import { toggleHide } from './store';
+
+import HideButton from './HideButton.js';
 
 class HideButtons2 extends Component {
 
@@ -12,45 +14,21 @@ class HideButtons2 extends Component {
     this.state = {
       backgroundColor: '#77787980'
     };
+    this.handleHide = this.handleHide.bind(this);
+  }
+
+  handleHide(){
+    const { handleHide, toggleHide } = this.props;
+    handleHide(); // from Home
+    toggleHide(); // from connect wrapper
   }
 
   render() {
     const { toggleHide, hide, handleHide } = this.props;
     return (
       <View>
-        <VrButton
-          style={[
-            stylesheet.toggleViewButton,
-            { backgroundColor: this.state.backgroundColor }]}
-          onClick={() => { handleHide(); toggleHide(); }}
-          onEnter={() => this.setState({ backgroundColor: '#777879' })}
-          onExit={() => this.setState({ backgroundColor: '#77787980' })}>
-          <Text
-            style={{
-              fontSize: 0.3,
-              fontWeight: '400',
-              textAlign: 'center',
-            }}>
-            {hide === false ? 'Show' : 'Hide'}
-          </Text>
-        </VrButton>
-
-        <VrButton
-          style={[
-            stylesheet.toggleViewButtonBottom,
-            { backgroundColor: this.state.backgroundColor }]}
-          onClick={() => { handleHide(); toggleHide(); }}
-          onEnter={() => this.setState({ backgroundColor: '#777879' })}
-          onExit={() => this.setState({ backgroundColor: '#77787980' })}>
-          <Text
-            style={{
-              fontSize: 0.3,
-              fontWeight: '400',
-              textAlign: 'center',
-            }}>
-            {hide === false ? 'Show' : 'Hide'}
-          </Text>
-        </VrButton>
+        <HideButton styles={stylesheet.hide_button_top} handleHide={this.handleHide} hide={hide} />
+        <HideButton styles={stylesheet.hide_button_bottom} handleHide={this.handleHide} hide={hide} />
       </View>
     );
   }
