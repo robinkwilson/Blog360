@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, Animated } from 'react-vr';
 
-import stylesheet from '../content/stylesheet.js';
+import stylesheet from '../../content/stylesheet.js';
 import _Text from './_Text';
 
 export function BlogPost(props) {

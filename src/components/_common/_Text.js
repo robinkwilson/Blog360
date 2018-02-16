@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Text } from 'react-vr';
 
 function _Text(props) {

@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import { Text, VrButton } from 'react-vr';
-import stylesheet from './content/stylesheet.js';
 
-import {
-  _Text,
-} from './_common';
-
-import {
-  loadHomeThunk,
-} from './store';
+import stylesheet from '../content/stylesheet.js';
+import { loadHomeThunk } from '../store';
+import { _Text, } from './_common';
 
 export class HomeButton extends Component {
 

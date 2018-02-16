@@ -1,25 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {
-  asset,
-  Pano,
-  View,
-  Animated,
-} from 'react-vr';
-
-import {
-  Middle,
-  Left,
-  Right,
-  HomeButton,
-  HideButtons
-} from './components';
-
-import {
-  loadHomeThunk,
-} from './store';
+import { asset, Pano, View, Animated } from 'react-vr';
 
 import stylesheet from './content/stylesheet.js';
+import { loadHomeThunk } from './store';
+import { Middle, Left, Right, HomeButton, HideButtons } from './components';
 
 class Home extends Component {
 

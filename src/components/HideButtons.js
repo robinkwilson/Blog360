@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View } from 'react-vr';
 
-import stylesheet from './content/stylesheet.js';
-import { toggleHide } from './store';
-
+import stylesheet from '../content/stylesheet.js';
+import { toggleHide } from '../store';
 import HideButton from './HideButton.js';
+
 
 class HideButtons extends Component {
 

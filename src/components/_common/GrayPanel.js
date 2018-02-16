@@ -1,7 +1,7 @@
 import React from 'react';
 import { Animated, View, StyleSheet } from 'react-vr';
 
-import stylesheet from '../content/stylesheet.js';
+import stylesheet from '../../content/stylesheet.js';
 
 export function GrayPanel (props) {
   const { children, styles } = props;

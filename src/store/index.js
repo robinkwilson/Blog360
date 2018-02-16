@@ -4,12 +4,10 @@ import { createLogger } from 'redux-logger';
 
 import page from './page.js';
 import hide from './hide.js';
-// import pano from './pano.js';
 
 const reducer = combineReducers({
   page,
   hide,
-//  pano
 });
 
 const loggerMiddleware = createLogger();

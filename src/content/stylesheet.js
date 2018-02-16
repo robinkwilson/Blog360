@@ -6,7 +6,6 @@ export default stylesheet = StyleSheet.create({
   view_panel: {
     flex: 1,
     flexDirection: 'column',
-    // alignItems: 'stretch',
     backgroundColor: '#000000BF',
     position: 'absolute'
   },
@@ -16,14 +15,6 @@ export default stylesheet = StyleSheet.create({
     height: 3,
     transform: [{ translate: [-1.5, 2.75, -5] }],
   },
-  // mapView: {
-  //   width: 5.5,
-  //   height: 4,
-  //   transform: [
-  //     { translate: [-2.75, 0, -5] },
-  //     { rotateX: -45 }],
-  //   padding: 0,
-  // },
   left_view: {
     padding: 0.1,
     width: 2.2,
@@ -41,23 +32,6 @@ export default stylesheet = StyleSheet.create({
       { translate: [1.65, 2.75, -4.5] },
       { rotateY: -20 }],
   },
-  // mapImage: {
-  //   width: 5.5,
-  //   height: 4,
-  // },
-
-  //WAYPOINTS
-  // wayPoint_view: {
-  //   position: 'absolute',
-  //   padding: 0.1,
-  //   width: 3,
-  //   height: 3,
-  //   transform: [{translate: [-1, 2.75, -3]}],
-  // },
-  // wayPoint_img: {
-  //   width: 3,
-  //   height: 3,
-  // },
 
   //MENU DISAPPEAR BUTTON
   hide_button_top: {
@@ -87,6 +61,7 @@ export default stylesheet = StyleSheet.create({
     fontWeight: '400',
     textAlign: 'center',
   },
+  
   //HOME BUTTON
   homeButton: {
     position: 'absolute',
