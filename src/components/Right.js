@@ -10,7 +10,7 @@ export function Right (props) {
     <GrayPanel styles={stylesheet.right_view}>
       {
         page && page.right_icons && page.right_icons.map(
-          icon => (<RightIcon key={icon.icon_id} icon_info={icon} />)
+          (icon) => (<RightIcon key={icon.icon_id} icon_info={icon} />)
         )
       }
     </GrayPanel>
