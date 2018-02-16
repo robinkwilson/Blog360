@@ -8,17 +8,12 @@ import {
 } from 'react-vr';
 
 import {
-  _Text,
-  GrayPanel,
-  BlogPost,
-  LeftIcon
-} from './_common';
-
-import Middle from './Middle.js';
-import Left from './Left.js';
-import Right from './Right.js';
-import HomeButton from './HomeButton.js';
-import HideButtons from './HideButtons.js';
+  Middle,
+  Left,
+  Right,
+  HomeButton,
+  HideButtons
+} from './components';
 
 import {
   loadHomeThunk,
@@ -74,7 +69,7 @@ class Home extends Component {
             }}
           />
         }
-        <HideButtons handleHide={this.handleHide}/>
+        <HideButtons handleHide={this.handleHide} />
         <Animated.View style={{ opacity: this.state.opacityValue }}>
           <Left />
           <Middle />
