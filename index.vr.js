@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { AppRegistry } from 'react-vr';
 
-import store from './components/store';
-import Home from './components/Home.js';
+import store from './src/store';
+import Home from './src/Home.js';
 
 export default class Blog360 extends Component {
   render() {
