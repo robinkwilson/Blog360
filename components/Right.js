@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import stylesheet from './content/stylesheet.js';
 import { GrayPanel, RightIcon } from './_common';
 
-export function Right2 (props) {
+export function Right (props) {
   const { page } = props;
   return (
     <GrayPanel styles={stylesheet.right_view}>
@@ -25,4 +25,4 @@ const mapState = (state) => {
   }
 }
 
-export default connect(mapState)(Right2);
+export default connect(mapState)(Right);

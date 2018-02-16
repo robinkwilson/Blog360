@@ -12,7 +12,7 @@ import {
   loadHomeThunk,
 } from './store';
 
-export class HomeButton2 extends Component {
+export class HomeButton extends Component {
 
   constructor(props) {
     super(props);
@@ -49,4 +49,4 @@ const mapDispatch = (dispatch) => {
 }
 
 
-export default connect(mapState, mapDispatch)(HomeButton2);
+export default connect(mapState, mapDispatch)(HomeButton);

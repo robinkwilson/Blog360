@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import stylesheet from './content/stylesheet.js';
 import { GrayPanel, _Text, LeftIcon } from './_common';
 
-export function Left2(props) {
+export function Left(props) {
   const { page } = props;
   return (
     <View>
@@ -30,4 +30,4 @@ const mapState = (state) => {
   }
 }
 
-export default connect(mapState)(Left2);
+export default connect(mapState)(Left);

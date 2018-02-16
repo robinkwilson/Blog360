@@ -7,7 +7,7 @@ import { toggleHide } from './store';
 
 import HideButton from './HideButton.js';
 
-class HideButtons2 extends Component {
+class HideButtons extends Component {
 
   constructor(props) {
     super(props);
@@ -46,4 +46,4 @@ const mapDispatch = (dispatch) => {
   }
 }
 
-export default connect(mapState, mapDispatch)(HideButtons2);
+export default connect(mapState, mapDispatch)(HideButtons);

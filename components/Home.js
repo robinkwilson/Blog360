@@ -14,11 +14,11 @@ import {
   LeftIcon
 } from './_common';
 
-import Middle2 from './Middle2.js';
-import Left2 from './Left2.js';
-import Right2 from './Right2.js';
-import HomeButton2 from './HomeButton2.js';
-import HideButtons2 from './HideButtons2.js';
+import Middle from './Middle.js';
+import Left from './Left.js';
+import Right from './Right.js';
+import HomeButton from './HomeButton.js';
+import HideButtons from './HideButtons.js';
 
 import {
   loadHomeThunk,
@@ -26,7 +26,7 @@ import {
 
 import stylesheet from './content/stylesheet.js';
 
-class Home2 extends Component {
+class Home extends Component {
 
   constructor(props) {
     super(props);
@@ -74,12 +74,12 @@ class Home2 extends Component {
             }}
           />
         }
-        <HideButtons2 handleHide={this.handleHide}/>
+        <HideButtons handleHide={this.handleHide}/>
         <Animated.View style={{ opacity: this.state.opacityValue }}>
-          <Left2 />
-          <Middle2 />
-          <Right2 />
-          <HomeButton2 />
+          <Left />
+          <Middle />
+          <Right />
+          <HomeButton />
         </Animated.View>
       </View>
     );
@@ -99,4 +99,4 @@ const mapDispatch = (dispatch) => {
   }
 }
 
-export default connect(mapState, mapDispatch)(Home2);
+export default connect(mapState, mapDispatch)(Home);
