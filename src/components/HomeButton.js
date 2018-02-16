@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import { Text, VrButton } from 'react-vr';
-import stylesheet from './content/stylesheet.js';
 
-import {
-  _Text,
-} from './_common';
+import stylesheet from '../content/stylesheet.js';
+import { loadHomeThunk } from '../store';
+import { _Text, } from './_common';
 
-import {
-  loadHomeThunk,
-} from './store';
-
-export class HomeButton2 extends Component {
+export class HomeButton extends Component {
 
   constructor(props) {
     super(props);
@@ -49,4 +43,4 @@ const mapDispatch = (dispatch) => {
 }
 
 
-export default connect(mapState, mapDispatch)(HomeButton2);
+export default connect(mapState, mapDispatch)(HomeButton);

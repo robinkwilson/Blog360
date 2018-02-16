@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Text, StyleSheet, VrButton } from 'react-vr';
 import { connect } from 'react-redux';
 
-import stylesheet from './content/stylesheet.js';
-import { toggleHide } from './store';
+import stylesheet from '../content/stylesheet.js';
+import { toggleHide } from '../store';
 
 class HideButton extends Component {
 
@@ -19,14 +19,12 @@ class HideButton extends Component {
     const { background_color } = this.state;
     return (
       <VrButton
-        style={StyleSheet.flatten([
-          styles,
-          { backgroundColor: background_color }])}
+        style={StyleSheet.flatten([ styles, { backgroundColor: background_color }])}
         onClick={() => { handleHide() }}
         onEnter={() => this.setState({ background_color: '#777879' })}
-        onExit={() => this.setState({ background_color: '#77787980' })}>
-        <Text
-          style={stylesheet.hide_button_text}>
+        onExit={() => this.setState({ background_color: '#77787980' })}
+      >
+        <Text style={stylesheet.hide_button_text}>
           {hide === false ? 'Hide' : 'Show'}
         </Text>
       </VrButton>

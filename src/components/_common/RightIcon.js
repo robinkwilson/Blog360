@@ -1,11 +1,10 @@
 import React from 'react';
-
 import { View, Image, VrButton, asset } from 'react-vr';
 import { connect } from 'react-redux';
 
-import { changePageThunk } from '../store';
+import stylesheet from '../../content/stylesheet.js';
+import { changePageThunk } from '../../store';
 import { _Text } from './index.js';
-import stylesheet from '../content/stylesheet.js';
 
 export function RightIcon (props) {
   const { icon_info, changePage } = props;

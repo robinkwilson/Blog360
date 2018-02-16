@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-vr';
+import { Animated, View, StyleSheet } from 'react-vr';
 import { connect } from 'react-redux';
 
-import stylesheet from './content/stylesheet.js';
+import stylesheet from '../content/stylesheet.js';
 import { GrayPanel, _Text, LeftIcon } from './_common';
 
-export function Left2(props) {
+export function Left(props) {
   const { page } = props;
   return (
-    <View>
+    <Animated.View>
       <_Text styles={stylesheet.left_panel_text} text={'Featured Photos'} />
       <GrayPanel styles={stylesheet.left_view}>
         <View style={stylesheet.left_imgs_container}>
@@ -19,7 +19,7 @@ export function Left2(props) {
           }
         </View>
       </GrayPanel>
-    </View>
+    </Animated.View>
   );
 }
 
@@ -30,4 +30,4 @@ const mapState = (state) => {
   }
 }
 
-export default connect(mapState)(Left2);
+export default connect(mapState)(Left);

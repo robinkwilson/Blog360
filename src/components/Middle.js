@@ -2,10 +2,10 @@ import React from 'react';
 import { Animated, View } from 'react-vr';
 import { connect } from 'react-redux';
 
-import stylesheet from './content/stylesheet.js';
+import stylesheet from '../content/stylesheet.js';
 import { GrayPanel, BlogPost } from './_common';
 
-export function Middle2(props) {
+export function Middle(props) {
   const {blog_title, blog_text} = props;
   return (
     <GrayPanel styles={stylesheet.mid_view}>
@@ -21,4 +21,4 @@ const mapState = (state) => {
   }
 }
 
-export default connect(mapState)(Middle2);
+export default connect(mapState)(Middle);
