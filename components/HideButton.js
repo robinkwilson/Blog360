@@ -27,7 +27,7 @@ class HideButton extends Component {
         onExit={() => this.setState({ background_color: '#77787980' })}>
         <Text
           style={stylesheet.hide_button_text}>
-          {hide === false ? 'Show' : 'Hide'}
+          {hide === false ? 'Hide' : 'Show'}
         </Text>
       </VrButton>
     );
